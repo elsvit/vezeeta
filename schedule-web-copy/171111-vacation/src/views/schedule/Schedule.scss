@@ -1,0 +1,90 @@
+@import '../../shared/Variables';
+@import '../../shared/Colors';
+@import '../../shared/FontSizes';
+
+#SearchByPatient {
+  .combo-box {
+    .input-container {
+      border-bottom: none;
+      background-color: #e2e6ea;
+      font-size: 16px;
+      border-radius: 3px;
+    }
+
+    input {
+      background-color: #e2e6ea;
+    }
+
+    .icon-container {
+      display: none;
+    }
+  }
+}
+
+.appointments-container {
+  border-radius: 5px;
+  border: 2px solid $medium-grey;
+  padding: 0;
+}
+
+.appointments-title-container {
+  padding: $spacing-6 $spacing-6 $spacing-4 $spacing-11;
+  border-bottom: 2px solid $medium-grey;
+  display: -webkit-flex;
+  display: flex;
+  margin: 0;
+
+  button {
+    height: 44px;
+    width: 209px;
+    font-size: $heading-en;
+  }
+}
+
+.appointments-list-container {
+  padding: $spacing-7 0 $spacing-6 $spacing-12;
+}
+
+.patient-search-container {
+  width: 75%;
+
+  .combo-box {
+    height: 100%;
+
+    .input-container {
+      height: 100%;
+      border: none;
+      border-radius: 4px;
+      background-color: $light-grey;
+      padding: $spacing-2 $spacing-3 $spacing-2 $spacing-13;
+
+      .icon-container {
+        display: none;
+      }
+
+      svg {
+        margin-right: $spacing-3;
+
+        path {
+          fill: rgba($search-grey-shade, 0.6) !important;
+        }
+      }
+
+      input {
+        font-size: $heading-en;
+        color: $search-grey-shade;
+        opacity: 0.6;
+        cursor: text;
+
+        &::placeholder {
+          color: $search-grey-shade;
+          opacity: 0.6;
+        }
+      }
+    }
+
+    .error-message {
+      display: none;
+    }
+  }
+}

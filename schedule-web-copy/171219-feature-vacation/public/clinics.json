@@ -1,0 +1,80 @@
+{
+    "Success": true,
+    "Message": "Success",
+    "Data": {
+        "Clinics": [
+            {
+                "EntityKey": "entaf724254fc4f67a1",
+                "EntityName": "Clinic Name",
+                "Branches": [
+                    {
+                        "BranchKey": "brnc2dcd57c8376db024",
+                        "BranchName": "Heliopolis Branch 1",
+                        "Rooms": [
+                            {
+                                "RoomKey": "rooma25706ed92156988",
+                                "RoomName": "Room 1",
+                                "Doctors": [
+                                    {
+                                        "AccountKey": "acc84d0b4b2fd9a151a",
+                                        "DoctorName": "Omar ElMallahy"
+                                    }
+                                ]
+                            },
+                            {
+                                "RoomKey": "room245ab70c50ac6a76",
+                                "RoomName": "Room 2",
+                                "Doctors": [
+                                    {
+                                        "AccountKey": "acc84d0b4b2fd9a151a",
+                                        "DoctorName": "Omar ElMallahy"
+                                    },
+                                    {
+                                        "AccountKey": "acc9d7eb1a580623cca",
+                                        "DoctorName": "Ahmed Shirin"
+                                    }
+                                ]
+                            },
+                            {
+                                "RoomKey": "room189616e1c591fc03",
+                                "RoomName": "Room 3",
+                                "Doctors": [
+                                    {
+                                        "AccountKey": "acc6263eb0ac289af20",
+                                        "DoctorName": "Mohamed Essam"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "BranchKey": "brncd142a8d780459e6e",
+                        "BranchName": "Nasr City Branch 2",
+                        "Rooms": [
+                            {
+                                "RoomKey": "roomef5f2741d78340fb",
+                                "RoomName": "Room 14",
+                                "Doctors": [
+                                    {
+                                        "AccountKey": "acc9a8687c48009cded",
+                                        "DoctorName": "Beshoy Ibrahim"
+                                    },
+                                    {
+                                        "AccountKey": "acc5b092e2a8d0ef724",
+                                        "DoctorName": "Mounir Shaker"
+                                    },
+                                    {
+                                        "AccountKey": "acc91056dccd21833d8",
+                                        "DoctorName": "Alaa Mohammed"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "HasCareProductLine": true,
+                "HasBookProductLine": true
+            }
+        ]
+    }
+}

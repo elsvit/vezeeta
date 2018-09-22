@@ -1,0 +1,118 @@
+@import '../../../shared/Variables';
+@import '../../../shared/Colors';
+@import '../../../shared/FontSizes';
+
+.appointment {
+  padding: $spacing-3 0 $spacing-1 0;
+  color: $helper-grey;
+  margin: 0;
+}
+
+.passed {
+  opacity: 0.4;
+}
+
+.appointments-list-container {
+  .horizontal {
+    display: flex;
+    position: relative;
+    color: $helper-grey;
+    opacity: 0.6;
+    font-weight: 600;
+    font-size: $subheading-en !important;
+    line-height: $subheading-en;
+    margin: $spacing-5 0 $spacing-7 0;
+    white-space: nowrap;
+
+    &::before,
+    &::after {
+      color: #fff;
+      content: '';
+      border-bottom: groove 2px;
+      opacity: 0.6;
+      display: block;
+      box-shadow: 0 -1px; /* ou 0 1px si border-style:ridge */
+    }
+
+    &::before {
+      margin: auto 1em auto 0;
+      width: 6%;
+    }
+
+    &::after {
+      margin: auto 0 auto 1em;
+      width: 95%;
+    }
+  }
+
+  .separator {
+    border-top: 1px solid $medium-grey;
+    opacity: 0.6;
+    margin: $spacing-3 $spacing-12 $spacing-3 0;
+  }
+}
+
+.patient-notes {
+  display: inline-block;
+  top: 6px;
+  left: 8px;
+  position: relative;
+}
+
+.appointment-info-container {
+  padding: 0;
+  width: 74%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+
+.appointment-patient-details {
+  padding: 0;
+}
+
+.appointment-details-title {
+  font-weight: 600;
+  font-size: $heading-en !important;
+  line-height: $heading-en;
+  letter-spacing: 0.5px;
+  color: $helper-grey;
+}
+
+.appointment-heading {
+  font-size: $subheading-en !important;
+  line-height: $subheading-en;
+  display: block;
+  font-weight: 500;
+  margin-top: $spacing-1;
+  color: $helper-grey;
+}
+
+.appointments-doctor-details {
+  padding: 0;
+}
+
+.appointments-time-details {
+  padding: 0;
+}
+
+.appointments-actions-container {
+  padding-left: 0;
+  width: 20%;
+}
+
+.appointment-passed {
+  .appointment-details-title,
+  .appointment-heading,
+  .appointments-actions-container .icon {
+    opacity: 0.6;
+  }
+}
+
+.appointment-patient-details {
+  .appointment-details-title {
+    color: $vezeeta-blue;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,25 @@
+@import '../shared/Mixins';
+@import '../shared/Colors';
+
+div {
+  &.country-item,
+  &.country-item-value {
+    @include center-vertical;
+
+    .flag {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .name {
+      font-weight: 500;
+      color: #fff;
+      text-decoration: none;
+      white-space: nowrap;
+      color: $default-grey;
+      cursor: pointer !important;
+    }
+  }
+}

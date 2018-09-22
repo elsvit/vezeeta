@@ -1,0 +1,34 @@
+@import '../shared/Colors';
+@import '../shared/Variables';
+
+.lazy-loading-container {
+  div {
+    animation: colorChange 750ms infinite ease-in-out;
+    animation-direction: alternate;
+  }
+
+  .no-animation {
+    animation: none;
+  }
+
+  .text {
+    height: $text-height;
+    width: $text-width;
+    border-radius: $text-border-radius;
+  }
+
+  .photo {
+    height: $picture-height;
+    width: $picture-width;
+    border-radius: $picture-border-radius;
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    background: $medium-grey;
+  }
+  100% {
+    background: $light-grey;
+  }
+}

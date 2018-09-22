@@ -1,0 +1,48 @@
+@import '../shared/Mixins';
+@import '../shared/Colors';
+@import '../shared/Variables';
+
+.signup-step {
+  margin-bottom: $spacing-12;
+  padding: 0 $spacing-12;
+  display: flex;
+  flex-flow: row;
+
+  .back-container {
+    margin-right: 22px;
+
+    .back-btn {
+      padding: 0;
+      margin-top: $spacing-2;
+      background-color: transparent;
+      border: 0;
+      outline: none;
+
+      @include center;
+      @include box-shadow(none);
+      @include border-radius(2px);
+    }
+
+    .reserve-back-btn {
+      width: 14px;
+    }
+  }
+
+  .content-container {
+    .title,
+    .subheading {
+      margin: 0;
+    }
+
+    .title {
+      margin-bottom: $spacing-5;
+      font-weight: 500;
+    }
+
+    .subheading {
+      font-weight: 400;
+      color: $helper-grey;
+      line-height: normal;
+    }
+  }
+}

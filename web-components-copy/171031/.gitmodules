@@ -1,0 +1,6 @@
+[submodule "src/lib/shared"]
+	path = src/lib/shared
+	url = https://vezeeta-final.visualstudio.com/web-packages/_git/web-shared
+[submodule "docs"]
+	path = docs
+	url = https://vezeeta-final.visualstudio.com/web-packages/_git/web-docs

@@ -1,0 +1,31 @@
+export const scheduleTypes = {
+  onSchedule: 1,
+  fifo: 2,
+};
+
+export const GENDER_TYPES = {
+  MALE: 'MALE',
+  FEMALE: 'FEMALE',
+};
+
+export const FILTER_NAMES = {
+  BRANCHES: 'BRANCHES',
+  ROOMS: 'ROOMS',
+  DOCTORS: 'DOCTORS',
+};
+
+export const ALL_BRANCHES_VALUE = 'ALL_BRANCHES';
+
+export const MODAL_NAMES = {
+  PATIENT_DETAILS: 'PATIENT_DETAILS',
+  PATIENT_NOTES: 'PATIENT_NOTES',
+  ADD_APPOINTMENT: 'ADD_APPOINTMENT',
+  RESCHEDULE: 'RESCHEDULE',
+};
+
+export const CONFIRMATION_SELECT_TYPES = {
+  THIS_WEEK: 'THIS_WEEK',
+  NEXT_WEEK: 'NEXT_WEEK',
+  THIRD_WEEK: 'THIRD_WEEK',
+  FOURTH_WEEK: 'FOURTH_WEEK',
+};

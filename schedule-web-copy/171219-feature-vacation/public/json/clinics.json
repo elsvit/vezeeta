@@ -1,0 +1,81 @@
+{
+  "status": 200,
+  "Success": true,
+  "Message": "Success",
+  "data": {
+    "Clinics": [
+      {
+        "EntityKey": "enta28a1c63d2cac98",
+        "EntityName": "Clinic",
+        "Branches": [
+          {
+            "BranchKey": "brnce1a1d817114b7962",
+            "BranchName": "Heliopolis Branch 1",
+            "Rooms": [
+              {
+                "RoomKey": "roomb68855803d2a1626",
+                "RoomName": "Room 1",
+                "Doctors": [
+                  {
+                    "AccountKey": "accac8eea95ce5344d2",
+                    "DoctorName": "Omar ElMallahy"
+                  }
+                ]
+              },
+              {
+                "RoomKey": "roomb68855803d2a1625",
+                "RoomName": "Room 2",
+                "Doctors": [
+                  {
+                    "AccountKey": "accac8eea95ce5344d2",
+                    "DoctorName": "Omar ElMallahy"
+                  },
+                  {
+                    "AccountKey": "accb6abfc111246987f",
+                    "DoctorName": "Ahmed Shirin"
+                  }
+                ]
+              },
+              {
+                "RoomKey": "room189616e1c591fc03",
+                "RoomName": "Room 3",
+                "Doctors": [
+                  {
+                    "AccountKey": "accb6abfc111246987f",
+                    "DoctorName": "Mohamed Essam"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "BranchKey": "brncd142a8d780459e6e",
+            "BranchName": "Nasr City Branch 2",
+            "Rooms": [
+              {
+                "RoomKey": "roomef5f2741d78340fb",
+                "RoomName": "Room 14",
+                "Doctors": [
+                  {
+                    "AccountKey": "acc9a8687c48009cded",
+                    "DoctorName": "Beshoy Ibrahim"
+                  },
+                  {
+                    "AccountKey": "acc5b092e2a8d0ef724",
+                    "DoctorName": "Mounir Shaker"
+                  },
+                  {
+                    "AccountKey": "acc91056dccd21833d8",
+                    "DoctorName": "Alaa Mohammed"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "HasCareProductLine": true,
+        "HasBookProductLine": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+@import '../shared/FontSizes';
+@import '../shared/Colors';
+@import '../shared/Mixins';
+@import '../shared/Variables';
+
+button {
+  &.btn {
+    min-width: 165px;
+    border: 0;
+    outline: 0 !important;
+    cursor: pointer;
+    color: #fff !important;
+    font-weight: 500;
+
+    @include border-radius($spacing-1);
+
+    @include desktop {
+      font-size: $body-en;
+      height: $button-height--desktop;
+      padding: 0 $spacing-5;
+
+      &:lang(ar) {
+        font-size: $body-ar;
+      }
+    }
+
+    @include mobile {
+      font-size: $body-en--mobile;
+      height: $button-height--mobile;
+      padding: 0 $spacing-6;
+
+      &:lang(ar) {
+        font-size: $body-ar--mobile;
+      }
+    }
+
+    &.btn--blue {
+      background-color: $vezeeta-blue;
+
+      &:hover {
+        background-color: #4094da;
+      }
+    }
+
+    &.btn--red {
+      background-color: $vezeeta-red;
+
+      &:hover {
+        background-color: #f34b4b;
+      }
+    }
+
+    &:disabled {
+      background-color: $medium-grey;
+      color: $helper-grey !important;
+
+      &:hover {
+        background-color: $medium-grey;
+      }
+    }
+  }
+}

@@ -1,0 +1,322 @@
+@import '../../../../shared/Variables';
+@import '../../../../shared/Colors';
+@import '../../../../shared/FontSizes';
+
+.add-appointment-modal {
+  height: fit-content;
+  width: 53%;
+  overflow: visible;
+
+  .modal-header {
+    padding: $spacing-6 $spacing-11 $spacing-2;
+  }
+
+  .modal-header-title {
+    letter-spacing: 1.5px;
+  }
+
+  .separator {
+    margin: $spacing-3 0 0 0;
+  }
+}
+
+.add-appointment-container {
+  padding: $spacing-6 $spacing-7;
+  background-color: $light-grey;
+
+  .modal-section-title {
+    padding: $spacing-4 $spacing-9;
+    border-bottom: 2px solid rgba($helper-grey, 0.6);
+
+    span {
+      font-size: $title-en;
+      line-height: $title-en;
+      color: $helper-grey;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  .combo-row-container .input-field {
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  .modal-buttons-container {
+    margin-top: $spacing-5;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+
+    .btn-container--ghost {
+      height: 48px;
+      max-width: none;
+      width: 35%;
+      border: 2px solid $helper-grey;
+
+      .text-container {
+        min-width: 100%;
+
+        label {
+          font-size: $title-en;
+          margin-right: $spacing-3;
+          letter-spacing: 1px;
+        }
+      }
+    }
+
+    .btn {
+      width: 62%;
+      height: 48px;
+      label {
+        font-size: $title-en;
+      }
+    }
+  }
+
+  .input-field .caption {
+    position: absolute;
+    bottom: -$spacing-4;
+  }
+
+  .add-patient-search-container {
+    .combo-box {
+      height: 100%;
+
+      .input-container {
+        height: 100%;
+        border: none;
+        border-radius: 4px;
+        background-color: $light-grey;
+        padding: $spacing-2 $spacing-3 $spacing-2 $spacing-13;
+
+        .icon-container {
+          display: none;
+        }
+
+        svg {
+          margin-right: $spacing-3;
+
+          path {
+            fill: rgba($search-grey-shade, 0.6) !important;
+          }
+        }
+
+        input {
+          font-size: $heading-en;
+          color: $search-grey-shade;
+          opacity: 0.6;
+          cursor: text;
+
+          &::placeholder {
+            color: $search-grey-shade;
+            opacity: 0.6;
+          }
+        }
+      }
+
+      .error-message {
+        display: none;
+      }
+    }
+  }
+
+  .add-appointment-error {
+    text-align: center;
+    color: $vezeeta-red;
+    margin: $spacing-3 0 0;
+  }
+}
+
+.patient-info-container {
+  .modal-section-content {
+    padding: $spacing-12 $spacing-12 $spacing-9 $spacing-9;
+  }
+}
+
+.patient-info-container,
+.add-appointment-info-container {
+  border: 1px solid rgba($helper-grey, 0.6);
+  border-radius: 4px;
+  background-color: #fff;
+
+  .combo-box {
+    margin-right: 0;
+
+    .input-container {
+      border-bottom: 1px solid $helper-grey;
+      .placeholder-img {
+        display: none;
+      }
+    }
+  }
+
+  .input-field input {
+    border-bottom: 1px solid $helper-grey;
+  }
+
+  .input-field,
+  .combo-box {
+    input {
+      font-size: $title-en;
+      color: $helper-grey;
+      &::placeholder {
+        color: $helper-grey;
+      }
+    }
+  }
+
+  .combo-row-container .input-date-container {
+    width: 47%;
+
+    label {
+      font-size: $title-en;
+      color: $helper-grey;
+      font-weight: 500;
+    }
+  }
+}
+
+.add-appointment-info-container {
+  margin-top: 22px;
+
+  .modal-section-content {
+    padding: $spacing-5 $spacing-9 $spacing-7;
+  }
+
+  .modal-section-content > .combo-box {
+    margin: $spacing-5 0;
+  }
+}
+
+.add-patient-container {
+  position: relative;
+  margin-top: $spacing-7;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+
+  .add-patient-icon {
+    border: 1px solid $vezeeta-blue;
+    border-radius: 4px 0 0 4px;
+    margin-right: -1px;
+    height: 37px;
+    width: 44px;
+    position: relative;
+
+    svg {
+      position: absolute;
+      left: 50%;
+      margin-left: -8.5px;
+      top: 50%;
+      margin-top: -7.5px;
+    }
+  }
+
+  .btn-container--ghost {
+    border: 1px solid $vezeeta-blue;
+    height: 37px;
+    max-width: 131px;
+
+    .text-container {
+      min-width: 131px;
+    }
+
+    label {
+      font-size: $heading-en;
+      color: $blue-two;
+    }
+  }
+}
+
+.combo-row-container {
+  display: flex;
+  display: -webkit-flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+  margin: $spacing-5 0;
+
+  .combo-box {
+    width: 47%;
+  }
+}
+
+.add-patient-info-container {
+  .combo-row-container {
+    margin: 0 0 $spacing-5;
+  }
+
+  .modal-section-content {
+    padding: $spacing-4 $spacing-10 $spacing-4;
+  }
+
+  .add-patient-insurance {
+    margin-bottom: $spacing-5;
+  }
+
+  .input-field {
+    width: 46%;
+  }
+
+  .phone-number-combo-row {
+    .combo-box {
+      width: 18%;
+    }
+
+    .input-field {
+      width: 76%;
+    }
+  }
+}
+
+.gender-radio-container {
+  width: 46%;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+
+  span {
+    font-size: $title-en;
+    line-height: $title-en;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: $search-grey-shade;
+  }
+
+  .radio-button-list {
+    width: 57%;
+
+    li label {
+      padding: 0 $spacing-2 0 $spacing-8;
+    }
+
+    li .check {
+      height: 24px;
+      width: 24px;
+
+      &::before {
+        height: 12px;
+        width: 12px;
+        top: 4px;
+        left: 4px;
+      }
+    }
+  }
+}
+
+.add-appointment-loading {
+  position: absolute;
+  width: 91%;
+  height: 91%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}

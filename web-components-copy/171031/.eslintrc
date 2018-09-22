@@ -1,0 +1,43 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es6": true,
+    "mocha": true
+  },
+  "extends": ["airbnb"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true,
+      "modules": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": ["import", "jsx-a11y", "react"],
+  "rules": {
+    "indent": ["error", 2],
+    "quotes": ["error", "single"],
+    "no-console": "warn",
+    "semi": ["error", "always"],
+    "radix": "off",
+    "prefer-destructuring": "off",
+    "array-callback-return": "off",
+    "consistent-return": "off",
+    "react/forbid-prop-types": 0,
+    "react/require-default-props": 0,
+    "arrow-parens": ["error", "always"],
+    "no-unused-expressions": "off",
+    "max-len": "off",
+    "class-methods-use-this": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/no-noninteractive-tabindex": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
+    "import/no-webpack-loader-syntax": "off",
+    "import/no-unresolved": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/label-has-for": "off",
+    "react/no-array-index-key": "off"
+  }
+}

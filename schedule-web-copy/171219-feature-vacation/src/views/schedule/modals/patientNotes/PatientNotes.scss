@@ -1,0 +1,14 @@
+@import '../../../../shared/Variables';
+@import '../../../../shared/Colors';
+@import '../../../../shared/FontSizes';
+
+.modal-content {
+  .patient-notes-info-container {
+    padding: $spacing-7 $spacing-8 $spacing-7 $spacing-16;
+    font-size: $title-en;
+    line-height: $title-en;
+    color: $helper-grey;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+}

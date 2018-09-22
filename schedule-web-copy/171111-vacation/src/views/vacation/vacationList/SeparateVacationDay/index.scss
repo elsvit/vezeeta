@@ -1,0 +1,22 @@
+@import '../../../../shared/Colors';
+@import '../../../../shared/Variables';
+
+.today-separate {
+  position: relative;
+  border-bottom: 2px solid $medium-grey;
+  width: 100%;
+  padding: $spacing-1 0;
+  margin: $spacing-5 0 $spacing-4;
+}
+.today-separate-text {
+  position: absolute;
+  left: 40px;
+  top: 0;
+  color: $medium-grey;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: white;
+  padding: 0 $spacing-4;
+}
+
+

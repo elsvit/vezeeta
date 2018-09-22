@@ -1,0 +1,66 @@
+@import '../shared/Variables';
+@import '../shared/Mixins';
+@import '../shared/FontSizes';
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  @include border-radius(4px);
+
+  background-color: #fff;
+  min-height: 600px;
+  padding: $spacing-5;
+}
+
+.schedule-card {
+  @include display-grid;
+  @include grid-columns(240px 1fr);
+
+  grid-gap: $spacing-5;
+  width: 100%;
+}
+
+.list--container {
+  border: 1px solid $medium-grey;
+  border-radius: 5px;
+}
+
+.list--title-container {
+  align-items: center;
+  border-bottom: 1px solid $medium-grey;
+  display: flex;
+  justify-content: space-between;
+  padding: $spacing-3 $spacing-5;
+}
+
+.list--title {
+  font-weight: 500 !important;
+  margin: 0;
+}
+
+.list--content {
+  margin: 0 $spacing-5;
+}
+
+.list--btn {
+  background-color: $vezeeta-red;
+
+  label {
+    font-size: $subheading-en;
+  }
+}
+
+.filter-placeholder {
+  font-weight: 500 !important;
+}
+
+.loading-container {
+  @include center;
+
+  height: 100%;
+  width: 100%;
+}

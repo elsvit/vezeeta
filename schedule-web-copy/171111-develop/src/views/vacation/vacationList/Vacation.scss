@@ -1,0 +1,58 @@
+@import '../../../shared/Colors';
+@import '../../../shared/Variables';
+@import '../../../shared/Mixins';
+
+.vacation--container {
+  @include display-grid;
+  @include grid-columns(40% 50% 10%);
+  @include grid-rows(auto auto);
+
+  border-bottom: 1px solid $medium-grey;
+  grid-template-areas:
+    'name date delete'
+    'room date delete';
+  margin: 0 auto;
+  padding: $spacing-5 0;
+  width: 95%;
+
+  .doctor-name {
+    font-weight: 500 !important;
+    margin: 0;
+  }
+
+  .room {
+    color: $helper-grey;
+    margin: 0;
+  }
+
+  .vacation-details--container {
+    align-items: center;
+    display: flex;
+    grid-area: date;
+
+    .vacation-details {
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+
+  .vacation-list-icon {
+    align-items: center;
+    border: 1px solid $vezeeta-blue;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    grid-area: delete;
+    height: 50px;
+    justify-content: center;
+    width: 50px;
+  }
+
+  &:last-of-type {
+    border-bottom: 0;
+  }
+}
+
+.vacation-del-confirm-hide {
+  display: none;
+}

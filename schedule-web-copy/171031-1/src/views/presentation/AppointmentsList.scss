@@ -1,0 +1,34 @@
+.appointment {
+  padding: 20px 0;
+  color: #808184;
+  font-size: 16px;
+}
+
+.passed {
+  opacity: 0.4;
+}
+
+.horizontal {
+  display: flex;
+  margin-left: -75%;
+  position: relative;
+  color: #808184;
+  opacity: 0.6;
+  font-size: 14px;
+  font-weight: bold;
+}
+.horizontal:before,
+.horizontal:after {
+  color: white;
+  content: '';
+  flex: 1;
+  border-bottom: groove 2px;
+  margin: auto 0.25em;
+  box-shadow: 0 -1px; /* ou 0 1px si border-style:ridge */
+}
+
+.separator {
+  border-top: 1px solid #808184;
+  opacity: 0.6;
+  margin: 10px 0;
+}

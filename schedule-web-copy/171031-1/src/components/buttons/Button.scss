@@ -1,0 +1,51 @@
+@import '../typography/Typography';
+@import '../base/Colors';
+@import '../base/Mixins';
+
+button {
+  &.btn {
+    min-width: 165px;
+    border: 0;
+    outline: 0 !important;
+    color: #fff !important;
+    font-weight: 500;
+
+    @include border-radius(4px);
+
+    @include desktop {
+      font-size: $body-en;
+      height: 36px;
+      padding: 6px 20px;
+
+      &:lang(ar) {
+        font-size: $body-ar;
+      }
+    }
+
+    @include mobile {
+      font-size: $body-en--mobile;
+      height: 40px;
+      padding: 6px 22px;
+
+      &:lang(ar) {
+        font-size: $body-ar--mobile;
+      }
+    }
+
+    &.btn--blue {
+      background-color: $vezeeta-blue;
+
+      &:hover {
+        background-color: #4094da;
+      }
+    }
+
+    &.btn--red {
+      background-color: $vezeeta-red;
+
+      &:hover {
+        background-color: #f34b4b;
+      }
+    }
+  }
+}

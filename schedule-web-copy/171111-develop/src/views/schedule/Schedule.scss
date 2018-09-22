@@ -1,0 +1,50 @@
+@import '../../shared/Variables';
+@import '../../shared/Colors';
+@import '../../shared/FontSizes';
+
+#SearchByPatient {
+  .combo-box {
+    .input-container {
+      border-bottom: none;
+      background-color: #e2e6ea;
+      font-size: 16px;
+      border-radius: 3px;
+    }
+
+    input {
+      background-color: #e2e6ea;
+    }
+
+    .icon-container {
+      display: none;
+    }
+  }
+}
+
+.appointments-container {
+  border-radius: 5px;
+  border: 2px solid $medium-grey;
+  padding: 0;
+}
+
+.appointments-title-container {
+  padding: $spacing-6 $spacing-6 $spacing-4 $spacing-11;
+  border-bottom: 2px solid $medium-grey;
+  display: -webkit-flex;
+  display: flex;
+  margin: 0;
+
+  button {
+    height: 44px;
+    width: 209px;
+    font-size: $heading-en;
+  }
+}
+
+.appointments-list-container {
+  padding: $spacing-7 0 $spacing-6 $spacing-12;
+}
+
+.patient-search-container {
+  width: 75%;
+}

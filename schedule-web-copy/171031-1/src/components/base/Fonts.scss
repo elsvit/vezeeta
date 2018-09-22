@@ -1,0 +1,48 @@
+// AWS host
+$aws-host: 'https://s3-eu-west-1.amazonaws.com/cdn-vezeetastaging/vezeeta-account/fonts/';
+$source-sans: 'SourceSansPro';
+$the-sans: 'TheSans';
+
+// Sourcesans
+@font-face {
+  font-family: $source-sans;
+  font-style: light;
+  font-weight: 400;
+  src: url($aws-host + $source-sans +'/SourceSansPro-Light.otf');
+}
+
+@font-face {
+  font-family: $source-sans;
+  font-style: regular;
+  font-weight: 500;
+  src: url($aws-host + $source-sans + '/SourceSansPro-Regular.otf');
+}
+
+@font-face {
+  font-family: $source-sans;
+  font-style: semi-bold;
+  font-weight: 600;
+  src: url($aws-host + $source-sans + '/SourceSansPro-Semibold.otf');
+}
+
+@font-face {
+  font-family: $source-sans;
+  font-style: bold;
+  font-weight: 700;
+  src: url($aws-host + $source-sans + '/SourceSansPro-Bold.otf');
+}
+
+// TheSans
+@font-face {
+  font-family: $the-sans;
+  font-style: plain;
+  font-weight: 500;
+  src: url($aws-host + $the-sans + '/TheSansArabic-Plain.ttf');
+}
+
+@font-face {
+  font-family: $the-sans;
+  font-style: bold;
+  font-weight: 700;
+  src: url($aws-host + $the-sans + '/TheSans-Bold.ttf');
+}

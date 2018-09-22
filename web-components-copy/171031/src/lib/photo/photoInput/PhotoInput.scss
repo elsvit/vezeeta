@@ -1,0 +1,51 @@
+@import '../../shared/Colors';
+@import '../../shared/Mixins';
+
+.upload-photo-container {
+  flex-direction: column;
+
+  @include center-horizontal;
+
+  .upload-photo {
+    width: 130px;
+    height: 130px;
+    background-color: #f9f9f9;
+    border: 1px solid #e9e9e9;
+    cursor: pointer;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+
+    @include border-radius(50%);
+    @include center;
+
+    img {
+      position: absolute;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: #f9f9f9;
+
+      @include border-radius(50%);
+    }
+
+    svg {
+      z-index: 1;
+    }
+  }
+
+  .error-message {
+    text-align: center;
+    color: $vezeeta-red;
+    font-weight: 400;
+    max-width: 130px;
+    opacity: 0;
+    transition: opacity 200ms ease;
+
+    &.show-error-message {
+      opacity: 1;
+    }
+  }
+}

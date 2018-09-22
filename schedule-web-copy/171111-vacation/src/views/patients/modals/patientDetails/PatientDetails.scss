@@ -1,0 +1,166 @@
+@import '../../../../shared/Variables';
+@import '../../../../shared/Colors';
+@import '../../../../shared/FontSizes';
+
+.patient-details-info-container {
+  display: block;
+  position: relative;
+  padding: $spacing-8 $spacing-8;
+}
+
+.patient-details-info {
+  width: 50%;
+  padding: $spacing-2 0 0 $spacing-5;
+  display: inline-block;
+}
+
+.patient-details-delete-btn {
+  position: absolute;
+  right: $spacing-8;
+}
+
+.patient-details-name {
+  font-size: 24px;
+  line-height: 24px;
+  color: $helper-grey;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.patient-details-info-text {
+  font-size: $title-en;
+  line-height: $title-en;
+  color: $helper-grey;
+  font-weight: 500;
+}
+
+.patient-details-info-list {
+  margin-top: $spacing-5;
+}
+
+.patient-details-info-item {
+  margin-bottom: $spacing-4;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  -webkit-align-items: center;
+  align-items: center;
+
+  .patient-details-info-text {
+    margin-left: $spacing-8;
+    letter-spacing: 1px;
+  }
+  > svg {
+    overflow: visible;
+  }
+}
+
+.patient-details-delete-btn {
+  border: 1px solid $vezeeta-red;
+  border-radius: 4px;
+  width: 140px;
+
+  .text-container {
+    min-width: 100%;
+
+    label {
+      color: $vezeeta-red;
+      font-size: $heading-en;
+      line-height: $heading-en;
+    }
+  }
+}
+
+.confirm-info-container {
+  position: relative;
+  padding: $spacing-8 $spacing-3;
+}
+
+.confirm-info {
+  width: 50%;
+  padding: $spacing-2 0 0 $spacing-5;
+  display: inline-block;
+}
+
+.confirm-delete-btn {
+  position: absolute;
+  right: $spacing-8;
+}
+
+.confirm-name {
+  font-size: 24px;
+  line-height: 24px;
+  color: $helper-grey;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.confirm-info-text {
+  font-size: $title-en;
+  line-height: $title-en;
+  color: $helper-grey;
+  font-weight: 500;
+  text-align: center;
+}
+
+.patient-delete-confirm-show {
+  display: block;
+  position: absolute;
+  top: -48px;
+  right: 2px;
+  width: 70%;
+  background-color: white;
+  color: $helper-grey !important;
+  border: 2px solid $helper-grey;
+  z-index: 100;
+  min-width: fit-content;
+  label {
+    font-size: $heading-en;
+  }
+}
+
+.patient-delete-confirm-hide {
+  display: none;
+}
+
+.modal-buttons-container {
+  margin: $spacing-6 $spacing-5;
+  padding-left: $spacing-2;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+
+  .btn-container--ghost {
+    height: 48px;
+    max-width: none;
+    width: 45%;
+    border: 2px solid $helper-grey;
+    margin-right: 4px;
+
+    .text-container {
+      min-width: 100%;
+      margin: 0 auto;
+      text-align: center;
+
+      label {
+        font-size: $title-en;
+        margin-left: $spacing-2;
+        letter-spacing: 1px;
+        text-align: center;
+        width: fit-content;
+      }
+    }
+  }
+
+  .btn {
+    width: 55%;
+    height: 48px;
+    font-size: $title-en;
+    min-width: fit-content;
+    label {
+      font-size: $title-en;
+    }
+  }
+}
+

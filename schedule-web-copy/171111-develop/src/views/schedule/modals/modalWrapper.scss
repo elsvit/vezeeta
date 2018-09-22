@@ -1,0 +1,57 @@
+@import '../../../shared/Variables';
+@import '../../../shared/Colors';
+@import '../../../shared/FontSizes';
+
+.modal {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+  width: 43%;
+  height: 40%;
+  margin: 0 auto;
+  padding: 0 !important;
+
+  .separator {
+    border-top: 2px solid $helper-grey;
+    opacity: 0.6;
+    margin: $spacing-3 0;
+  }
+}
+
+.modal-header {
+  position: relative;
+  padding: $spacing-6 $spacing-8 $spacing-3;
+}
+
+.modal-arrow {
+  position: relative;
+  top: $spacing-1;
+  margin-right: $spacing-6;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.modal-close {
+  position: absolute;
+  top: 30px;
+  right: $spacing-8;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.modal-header-title {
+  font-size: $title-en;
+  line-height: $title-en;
+  color: $helper-grey;
+  font-weight: 600;
+  letter-spacing: 1px;
+  opacity: 0.6;
+}

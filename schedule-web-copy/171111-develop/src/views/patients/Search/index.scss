@@ -1,0 +1,27 @@
+@import '../../../shared/Colors';
+@import '../../../shared/Variables';
+@import '../../../shared/FontSizes';
+
+.search-field {
+  position: relative;
+  width: 100%;
+}
+.search-field > input {
+  width: 92%;
+  height: 100%;
+  margin: 0px auto;
+  padding: 11px 8px 11px 30px;
+  color: $default-grey;
+  background-color: $light-grey;
+  border: none;
+  border-radius: $border-radius;
+  font-size: $subheading-en;
+  font-weight: 600;
+}
+
+.lense-icon {
+  position: absolute;
+  top: 13px;
+  left: 7px;
+  z-index: 100;
+}

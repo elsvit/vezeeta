@@ -1,0 +1,191 @@
+@import '../../shared/Colors';
+@import '../../shared/Mixins';
+@import '../../shared/Variables';
+@import '../../shared/FontSizes';
+
+.working-hours-container {
+  .room-container {
+    @include border-radius(5px);
+
+    border: 1px solid $medium-grey;
+    flex-grow: inherit;
+    min-height: 550px;
+    position: relative;
+
+    .working-hours-list-title {
+      @include center-vertical;
+
+      .working-hours-controls {
+        @include center-vertical;
+      }
+
+      .blocks-input {
+        width: 220px;
+      }
+
+      .radio-button-list {
+        margin-right: $spacing-5;
+
+        label {
+          font-size: $subheading-en;
+          line-height: $subheading-en;
+          padding: 0 $spacing-7;
+        }
+
+        .check {
+          height: 18px;
+          width: 18px;
+
+          &::before {
+            height: 8px;
+            left: 3px;
+            top: 3px;
+            width: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .week-container {
+    padding: $spacing-5;
+
+    .day {
+      border: 1px solid $medium-grey;
+      border-bottom: 0;
+
+      &:first-child {
+        @include border-radius(5px 5px 0 0);
+      }
+
+      &:last-child {
+        @include border-radius(0 0 5px 5px);
+
+        border-bottom: 2px solid $medium-grey;
+      }
+
+      &.disable {
+        .day-title-container {
+          border-bottom: 0;
+        }
+
+        .shifts-container {
+          display: none;
+        }
+      }
+
+      .day-title-container {
+        @include center-vertical;
+
+        background-color: $light-grey;
+        border-bottom: 1px solid $medium-grey;
+        justify-content: space-between;
+        padding: $spacing-5 $spacing-8;
+
+        .day-title {
+          margin: 0;
+        }
+      }
+    }
+
+    .shifts-container {
+      padding: $spacing-6 $spacing-8;
+      position: relative;
+
+      .shift {
+        margin-bottom: $spacing-6;
+
+        .shift-details {
+          @include border-radius(3px);
+
+          border: 1px dashed $medium-grey;
+          margin-right: $spacing-4;
+          padding: $spacing-8;
+          width: calc(95% - 24px);
+
+          .combo-box {
+            margin: 0;
+
+            &.combo-box--no-icon svg {
+              display: flex;
+            }
+          }
+
+          .row-1,
+          .row-2 {
+            justify-content: end;
+            width: 100%;
+
+            .col-1 {
+              justify-content: end;
+              margin-right: $spacing-10;
+            }
+          }
+
+          .row-1 {
+            @include display-inline-grid;
+            @include grid-columns(65% 35%);
+
+            margin-bottom: $spacing-7;
+
+            .col-1 {
+              @include display-inline-grid;
+              @include grid-columns(45% 10% 45%);
+            }
+
+            .to {
+              @include center;
+
+              color: $helper-grey;
+              font-weight: 500;
+              margin: 0;
+            }
+          }
+
+          .row-2 {
+            @include display-inline-grid;
+            @include grid-columns(100%);
+
+            .col-1 {
+              @include display-inline-grid;
+              @include grid-columns(35% 35%);
+
+              margin-right: 0;
+            }
+
+            .visit-type-text {
+              @include center-vertical;
+
+              color: $helper-grey;
+              font-weight: 500;
+              justify-content: flex-end;
+              margin: 0;
+              margin-right: $spacing-3;
+            }
+          }
+        }
+
+        .remove {
+          @include center;
+
+          border: 1px solid $vezeeta-blue;
+          border-radius: 50%;
+          color: $vezeeta-blue;
+          cursor: pointer;
+          height: 40px;
+          width: 40px;
+
+          &:hover {
+            background-color: $vezeeta-blue;
+
+            svg {
+              path {
+                fill: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

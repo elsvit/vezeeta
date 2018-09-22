@@ -1,0 +1,9 @@
+/scripts
+/config
+/node_modules
+/public
+.editorconfig
+.eslintignore
+.eslintrc
+.npmignore
+yarn.lock

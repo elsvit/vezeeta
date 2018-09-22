@@ -1,0 +1,30 @@
+@import '../base/Colors';
+@import '../base/Mixins';
+
+.profile-photo {
+  position: relative;
+
+  .photo-container {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    display: none;
+    overflow: hidden;
+    border: 1.5px solid $light-grey;
+    background-color: $light-grey;
+
+    @include border-radius(50%);
+
+    .image {
+      position: absolute;
+      top: -1.5px;
+      left: -1.5px;
+      object-fit: cover;
+      z-index: 5;
+      width: 32px;
+      height: 32px;
+
+      @include border-radius(50%);
+    }
+  }
+}

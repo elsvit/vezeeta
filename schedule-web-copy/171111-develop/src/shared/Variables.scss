@@ -1,0 +1,41 @@
+// Spacings multiply by 4
+$spacing: 4;
+$spacing-1: ($spacing * 1) + px;
+$spacing-2: ($spacing * 2) + px;
+$spacing-3: ($spacing * 3) + px;
+$spacing-4: ($spacing * 4) + px;
+$spacing-5: ($spacing * 5) + px;
+$spacing-6: ($spacing * 6) + px;
+$spacing-7: ($spacing * 7) + px;
+$spacing-8: ($spacing * 8) + px;
+$spacing-9: ($spacing * 9) + px;
+$spacing-10: ($spacing * 10) + px;
+$spacing-11: ($spacing * 11) + px;
+$spacing-12: ($spacing * 12) + px;
+$spacing-13: ($spacing * 13) + px;
+$spacing-14: ($spacing * 14) + px;
+$spacing-15: ($spacing * 15) + px;
+$spacing-16: ($spacing * 16) + px;
+$spacing-17: ($spacing * 17) + px;
+$spacing-18: ($spacing * 18) + px;
+$spacing-19: ($spacing * 19) + px;
+$spacing-20: ($spacing * 20) + px;
+$spacing-21: ($spacing * 21) + px;
+
+// Border raduis
+$border-radius: 4px;
+$btn-border-radius: 4px;
+$card-border-radius: 4px;
+
+// Buttons
+$button-height--desktop: 36px;
+$button-height--mobile: 40px;
+
+// Lazy laoding
+$text-height: 25px;
+$text-width: 140px;
+$text-border-radius: 20px;
+
+$picture-height: 120px;
+$picture-width: 120px;
+$picture-border-radius: 50%;

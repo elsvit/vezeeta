@@ -1,0 +1,30 @@
+@import '../base/Colors';
+@import '../base/Mixins';
+
+.counter-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .counter-btn {
+    width: 30px;
+    height: 30px;
+    background-color: $light-grey;
+    color: $vezeeta-blue;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    @include border-radius(50%);
+  }
+
+  h1 {
+    margin: 0 16px;
+    font-weight: 500;
+    min-width: 20px;
+    text-align: center;
+  }
+}

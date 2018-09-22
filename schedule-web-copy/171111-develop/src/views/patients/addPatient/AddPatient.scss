@@ -1,0 +1,151 @@
+@import '../../../shared/Variables';
+@import '../../../shared/Colors';
+
+$patients-add-patient-width: 500px;
+$patients-add-patient-height: 440px;
+
+.patients-add-patient-hide {
+  display: none;
+}
+
+.patients-add-patient {
+  display: block;
+  border-bottom: 2px solid $light-grey;
+  padding: $spacing-3;
+  box-sizing: border-box;
+}
+
+#patients-add-patient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .patients-add-patient-opacity {
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-color: $helper-grey;
+    opacity: 0.8;
+  }
+  .patients-add-patient-tab {
+    position: relative;
+    width: $patients-add-patient-width;
+    height: $patients-add-patient-height;
+    margin: $spacing-4 auto;
+    background-color: white;
+    border: 2px solid $light-grey;
+    border-radius: 2px;
+    z-index: 100;
+  }
+  .fs-22 {
+    font-size: 22px;
+  }
+  .patients-add-patient-header {
+    padding: $spacing-1;
+    margin-top: $spacing-1;
+  }
+
+  .patients-add-patient-header-title {
+    padding-left: $spacing-3;
+    padding-top: $spacing-2;
+    //margin: 30px 0 0 0;
+    font-size: 20px;
+    color: $medium-grey;
+  }
+  .patients-add-patient-header-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  .patients-add-patient-subblock {
+    padding: $spacing-1;
+    height: 40px;
+    margin-bottom: 20px;
+  }
+  .patients-add-patient-subblock-datainput {
+    padding: $spacing-1;
+    height: 40px;
+    margin: $spacing-1 0 $spacing-5 $spacing-1;
+  }
+  .patients-add-patient-input {
+    width: 100%;
+  }
+  .patients-add-patient-input > input {
+    color: $helper-grey;
+    font-size: 16px !important;
+    font-weight: 600;
+  }
+  .patients-add-patient-gender-radiobuttons {
+    padding: 0;
+    margin: 0;
+  }
+  .radio-button-list li label {
+    padding: 0 $spacing-5;
+  }
+  .patients-add-patient-combobox > input {
+    color: $helper-grey;
+    font-size: 16px !important;
+    font-weight: 600;
+  }
+  .combo-box .input-container,
+  .combo-box .input-container input {
+    color: $helper-grey;
+    font-size: 16px !important;
+    font-weight: 600;
+    min-width: 65px !important;
+    padding-top: 3px;
+  }
+
+  //.patients-add-patient-link {
+  //  margin: 0 $spacing-1;
+  //  opacity: .5;
+  //  cursor: pointer;
+  //  margin-bottom: -2px;
+  //}
+  //.patients-add-patient-active {
+  //  opacity: 1;
+  //  border-bottom: 2px solid $blue-two;
+  //  padding-bottom: $spacing-3;
+  //}
+
+  .patients-add-patient-branch-inline,
+  .patients-add-patient-doctor-inline {
+    display: inline-block;
+    padding: $spacing-2;
+  }
+  .patients-add-patient-branch-block,
+  .patients-add-patient-doctor-block {
+    display: block;
+    padding: $spacing-2;
+  }
+  .patients-add-patient-branch-select-branch {
+    width: 50%;
+    float: left;
+  }
+  .patients-add-patient-branch-select-room {
+    width: 50%;
+    float: left;
+  }
+  .patients-add-patient-button-left {
+    float: left;
+    margin: $spacing-3;
+  }
+  .patients-add-patient-button-right {
+    float: right;
+    margin: $spacing-3;
+  }
+  .patients-add-patient-button-cancel {
+    background-color: white;
+    color: $helper-grey !important;
+    border: 2px solid $helper-grey;
+  }
+  .input-date-label-class {
+    font-size: 18px;
+  }
+
+}

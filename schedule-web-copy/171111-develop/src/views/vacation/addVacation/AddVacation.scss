@@ -1,0 +1,123 @@
+@import '../../../shared/Variables';
+@import '../../../shared/Colors';
+
+$filter-width: 285px;
+
+.add-vacation-hide {
+  display: none;
+}
+
+.add-vacation {
+  display: block;
+}
+
+#add-vacation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .add-vacation-opacity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: $helper-grey;
+    opacity: 0.8;
+  }
+  .add-vacation {
+
+  }
+  .add-vacation-tab {
+    position: relative;
+    width: 500px;
+    height: 55px;
+    margin: $spacing-4 auto;
+    background-color: white;
+    //border: 2px solid $light-grey;
+    //border-radius: 2px;
+    //opacity: 1;
+    z-index: 100;
+  }
+  .add-vacation-header{
+    border-bottom: 2px solid $light-grey;
+    padding: $spacing-3;
+    box-sizing: border-box;
+  }
+  .add-vacation-header-link {
+    margin: 0 $spacing-1;
+    opacity: .5;
+    cursor: pointer;
+    margin-bottom: -2px;
+  }
+  .add-vacation-header-active {
+    opacity: 1;
+    border-bottom: 2px solid $blue-two;
+    padding-bottom: $spacing-3;
+  }
+  .add-vacation-header-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  .add-vacation-form-active {
+    display: inline-block;
+    width: 100%;
+    height: 550px;
+    background-color: white;
+    padding: $spacing-3;
+  }
+  .add-vacation-branch-active {
+    display: inline-block;
+    width: 100%;
+    height: 430px;
+    background-color: white;
+    padding: $spacing-3;
+  }
+  .add-vacation-doctor-active {
+    display: inline-block;
+    width: 100%;
+    height: 510px;
+    background-color: white;
+    padding: $spacing-3;
+  }
+  .add-vacation-form-hide {
+    display: none;
+  }
+  .add-vacation-branch-inline,
+  .add-vacation-doctor-inline {
+    display: inline-block;
+    padding: $spacing-2;
+  }
+  .add-vacation-branch-block,
+  .add-vacation-doctor-block {
+    display: block;
+    padding: $spacing-2;
+  }
+  .add-vacation-branch-select-branch {
+    width: 50%;
+    float: left;
+  }
+  .add-vacation-branch-select-room {
+    width: 50%;
+    float: left;
+  }
+  .add-vacation-button-left {
+    float: left;
+    margin: $spacing-3;
+  }
+  .add-vacation-button-right {
+    float: right;
+    margin: $spacing-3;
+  }
+  .add-vacation-button-cancel {
+    background-color: white;
+    color: $helper-grey !important;
+    border: 2px solid $helper-grey;
+  }
+  .input-date-label-class {
+    font-size: 18px;
+  }
+}

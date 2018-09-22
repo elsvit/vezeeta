@@ -1,0 +1,143 @@
+@import '../base/Colors';
+@import '../base/Mixins';
+@import '../base/FontSizes';
+
+$placeholder-padding: 8px;
+$placeholder-padding--mobile: 12px;
+
+$icon-padding: 6px;
+$icon-padding--mobile: 9px;
+
+.input-field {
+  position: relative;
+
+  .icon-container,
+  .helperIcon,
+  .helperImages {
+    position: absolute;
+  }
+
+  .helperIcon,
+  .icon-container {
+    display: inline-flex;
+    top: 8px;
+  }
+
+  .helperIcon,
+  .helperImages {
+    right: 0;
+  }
+
+  .icon-container {
+    height: 14px;
+
+    svg {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  .helperIcon {
+    height: 14px;
+    z-index: 2;
+  }
+
+  .helperImages {
+    top: 6px;
+
+    img {
+      margin-left: 8px;
+    }
+  }
+
+  input {
+    border: 0;
+    border-bottom: 1px solid $default-grey;
+    outline: 0;
+    line-height: normal;
+    width: 100%;
+    background-color: transparent;
+    font-size: $body-en;
+    font-weight: 400;
+
+    @include placeholder(rgba($default-grey, 0.5));
+    @include desktop {
+      padding: $placeholder-padding 2px $placeholder-padding 25px;
+      font-size: $body-en;
+
+      &:lang(ar) {
+        font-size: $body-ar;
+      }
+    }
+
+    @include mobile {
+      padding: $placeholder-padding--mobile 2px $placeholder-padding--mobile
+        31px;
+
+      font-size: $body-en--mobile;
+
+      &:lang(ar) {
+        font-size: $body-ar--mobile;
+      }
+    }
+
+    &.placeholder--center {
+      min-width: 233px;
+      text-align: center;
+      @include placeholder(rgba($default-grey, 0.5), center);
+
+      &:focus {
+        @include placeholder(rgba($default-grey, 0.5), center);
+      }
+    }
+
+    &.field-no-icon {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &.helper-icon {
+      padding-right: 30px;
+    }
+
+    &:focus {
+      border-bottom-color: $vezeeta-blue;
+    }
+
+    &:focus {
+      @include placeholder(rgba($default-grey, 0.5));
+    }
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  span {
+    color: $vezeeta-red;
+    display: block;
+    opacity: 0;
+    font-size: $caption-en;
+    height: 17px;
+    font-weight: 500;
+
+    &:lang(ar) {
+      font-size: $caption-ar;
+    }
+  }
+
+  &.input-field--danger {
+    input {
+      border-bottom-color: $vezeeta-red;
+    }
+
+    span {
+      opacity: 1;
+    }
+  }
+}

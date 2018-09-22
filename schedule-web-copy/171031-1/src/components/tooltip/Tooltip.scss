@@ -1,0 +1,135 @@
+@import '../base/Colors';
+@import '../base/Mixins';
+
+.tooltip {
+  position: absolute;
+  display: none;
+  min-width: 175px;
+  z-index: 999;
+  padding: 10px;
+  background: $light-grey;
+  border: 1px solid $medium-grey;
+  transition: all 150ms;
+
+  @include border-radius(4px);
+
+  &:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    display: block;
+    width: 0;
+    z-index: 1;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    display: block;
+    width: 0;
+    z-index: 0;
+
+    @include transform(translateX(-45%));
+  }
+
+  &.top {
+    bottom: calc(100% + 12px);
+    right: 50%;
+
+    @include transform(translateX(50%));
+
+    &:after {
+      top: 100%;
+      left: 50%;
+      border-width: 8px 8px 0;
+      border-color: $light-grey transparent;
+
+      @include transform(translateX(-50%));
+    }
+    &:before {
+      top: 100%;
+      left: 49.5%;
+      border-width: 9px 9px 0;
+      border-color: $medium-grey transparent;
+
+      @include transform(translateX(-50%));
+    }
+  }
+
+  &.bottom {
+    top: calc(100% + 12px);
+    right: 50%;
+
+    @include transform(translateX(50%));
+
+    &:after {
+      bottom: 100%;
+      left: 50%;
+      border-width: 0 8px 8px;
+      border-color: $light-grey transparent;
+
+      @include transform(translateX(-50%));
+    }
+    &:before {
+      bottom: 100%;
+      left: 49.5%;
+      border-width: 0 9px 9px;
+      border-color: $medium-grey transparent;
+
+      @include transform(translateX(-50%));
+    }
+  }
+
+  &.left {
+    right: calc(100% + 6px);
+    top: 50%;
+
+    @include transform(translateY(-50%));
+    &:after {
+      left: 100%;
+      top: 50%;
+      border-width: 8px 0 8px 8px;
+      border-color: transparent $light-grey;
+
+      @include transform(translateY(-50%));
+    }
+    &:before {
+      left: 100%;
+      top: 50%;
+      border-width: 9px 0 9px 9px;
+      border-color: transparent $medium-grey;
+
+      @include transform(translateY(-50%));
+    }
+  }
+
+  &.right {
+    left: calc(100% + 18px);
+    top: 50%;
+
+    @include transform(translateY(-50%));
+    &:after {
+      right: 100%;
+      top: 50%;
+      border-width: 8px 8px 8px 0;
+      border-color: transparent $light-grey;
+
+      @include transform(translateY(-50%));
+    }
+    &:before {
+      right: 100%;
+      top: 49.5%;
+      border-width: 9px 9px 9px 0;
+      border-color: transparent $medium-grey;
+
+      @include transform(translateY(-50%));
+    }
+  }
+
+  label {
+    display: block;
+    line-height: 18px;
+    font-weight: 500;
+  }
+}

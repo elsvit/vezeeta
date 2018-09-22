@@ -1,0 +1,31 @@
+$grey: #e0e0e0;
+
+.filter-section {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $grey;
+  border-left: 1px solid $grey;
+  border-right: 1px solid $grey;
+
+  .combo-box {
+    width: 50%;
+    img,
+    .error-message {
+      display: none;
+    }
+  }
+
+  .filter-placeholder {
+    color: #808184;
+    font-size: 16px;
+  }
+
+  .combo-box .input-container {
+    border-bottom: none;
+  }
+
+  .checkbox label {
+    color: #0070cd;
+    font-size: 16px;
+  }
+}

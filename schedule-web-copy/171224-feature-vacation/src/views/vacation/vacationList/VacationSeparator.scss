@@ -1,0 +1,23 @@
+@import '../../../shared/Colors';
+@import '../../../shared/Variables';
+
+.block-separator {
+  width: 95%;
+  border-bottom: 1px solid $medium-grey;
+  margin: $spacing-4 auto;
+  padding: $spacing-1 0;
+  position: relative;
+}
+
+.block-separator-text {
+  background-color: #fff;
+  color: $medium-grey;
+  font-size: 14px;
+  font-weight: 400;
+  left: $spacing-4;
+  padding: 0 $spacing-4;
+  position: absolute;
+  top: -2px;
+}
+
+

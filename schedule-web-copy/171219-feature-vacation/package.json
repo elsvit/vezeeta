@@ -1,0 +1,109 @@
+{
+  "name": "schedule",
+  "version": "0.4.1",
+  "private": true,
+  "dependencies": {
+    "@vezeeta/enterprise-layout": "^1.1.1",
+    "@vezeeta/web-components": "2.5.4",
+    "@vezeeta/web-utils": "^1.3.1",
+    "autoprefixer": "^7.1.6",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-jest": "^21.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-react-app": "^3.0.3",
+    "babel-runtime": "^6.26.0",
+    "case-sensitive-paths-webpack-plugin": "^2.1.1",
+    "chalk": "^2.3.0",
+    "classnames": "^2.2.5",
+    "crypto-js": "^3.1.9-1",
+    "css-loader": "^0.28.7",
+    "dotenv": "^4.0.0",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-prettier": "^2.3.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "fs-extra": "^4.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "immutability-helper": "^2.4.0",
+    "jest": "^21.2.1",
+    "jquery": "^3.2.1",
+    "js-cookie": "^2.2.0",
+    "node-sass": "^4.5.3",
+    "object-assign": "^4.1.1",
+    "postcss-flexbugs-fixes": "^3.2.0",
+    "postcss-loader": "^2.0.8",
+    "prettier": "^1.8.2",
+    "promise": "^8.0.1",
+    "prop-types": "^15.6.0",
+    "react": "16.2.0",
+    "react-dev-utils": "^4.1.0",
+    "react-dom": "16.2.0",
+    "react-error-overlay": "^1.0.9",
+    "react-loadable": "^5.3.1",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-saga": "^0.16.0",
+    "resolve-url-loader": "^2.1.1",
+    "sass-loader": "^6.0.6",
+    "sass-variable-loader": "^0.1.2",
+    "style-loader": "^0.19.0",
+    "sw-precache-webpack-plugin": "^0.11.4",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.3",
+    "webpack-manifest-plugin": "^1.3.2",
+    "whatwg-fetch": "^2.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0"
+  },
+  "scripts": {
+    "prettier":
+      "prettier \"src/**/*.{scss,js}\" --single-quote --require-pragma --insert-pragma --list-different --write",
+    "fix": "./node_modules/.bin/eslint --fix ./src/*",
+    "pre-commit": "yarn prettier && yarn fix",
+    "start":
+      "node -r dotenv/config scripts/start.js dotenv_config_path=env/.env.local",
+    "build": "node scripts/run-build.js",
+    "delete-maps":
+      "yarn run delete-map-files && yarn run delete-references-to-map-files",
+    "delete-map-files": "find ./build -name '*.map' -delete",
+    "delete-references-to-map-files":
+      "find ./build -regex '.*\\.\\(js\\|css\\)' -exec sed -i -E '\\/[\\*\\/]#\\ssourceMappingURL=main(\\.[0-9a-f]+)?\\.(css|js)\\.map(\\*\\/)?/g' {} +",
+    "test": "node scripts/test.js --env=jsdom"
+  },
+  "jest": {
+    "collectCoverageFrom": ["src/**/*.{js,jsx}"],
+    "setupFiles": ["<rootDir>/config/polyfills.js"],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.js?(x)",
+      "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web"
+    },
+    "moduleFileExtensions": ["web.js", "js", "json", "web.jsx", "jsx"]
+  },
+  "babel": {
+    "presets": ["react-app"]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  }
+}

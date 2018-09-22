@@ -1,0 +1,23 @@
+// English
+// Desktop
+$title-en: 20px;
+$heading-en: 18px;
+$subheading-en: 16px;
+$body-en: 13px;
+$caption-en: 12px;
+
+//Mobile
+$subheading-en--mobile: $subheading-en + 1;
+$body-en--mobile: $body-en + 1;
+
+// Arabic
+// Desktop
+$title-ar: $title-en - 1;
+$heading-ar: $heading-en - 1;
+$subheading-ar: $subheading-en - 1;
+$body-ar: $body-en - 1;
+$caption-ar: $caption-en - 1;
+
+//Mobile
+$subheading-ar--mobile: $subheading-en--mobile - 1;
+$body-ar--mobile: $body-en--mobile - 1;

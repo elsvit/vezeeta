@@ -1,0 +1,76 @@
+@import '../../shared/Variables';
+@import '../../shared/Colors';
+@import '../../shared/FontSizes';
+
+.calendar-wrapper {
+  margin-bottom: $spacing-4;
+}
+
+.vacation-modal {
+  .modal-container {
+    width: 624px !important;
+  }
+}
+
+.vacation-page {
+  .bg-color-red {
+    background-color: $vezeeta-red;
+  }
+
+  .vacation-button {
+    height: 42px;
+    //padding-left: $spacing-4;
+  }
+}
+
+.vacation-tab-container {
+  padding: $spacing-4;
+
+  .tab-block-container {
+    padding-bottom: $spacing-8;
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+
+    .tab-headline {
+      font-weight: 500;
+      margin-top: 0;
+    }
+
+    .tab-text {
+      font-weight: 500;
+    }
+
+    .reservations-number {
+      margin: 0;
+    }
+
+    .tab-content--row {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .tab-combo-box {
+      .input-container {
+        width: 280px;
+      }
+
+      &:nth-of-type(1) {
+        margin-right: $spacing-6;
+      }
+    }
+  }
+
+  .tab-buttons-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0;
+
+    .cancel-btn {
+      margin-right: $spacing-6;
+    }
+  }
+}

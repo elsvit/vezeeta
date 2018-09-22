@@ -1,0 +1,59 @@
+@import '../../shared/Mixins';
+@import '../../shared/Colors';
+@import '../../shared/Variables';
+
+.btn-container--social {
+  display: inline-flex;
+  align-items: center;
+  height: $button-height--desktop;
+  max-width: 240px;
+  cursor: pointer;
+  border: none;
+
+  @include border-radius(2px);
+
+  &.facebook {
+    background-color: #4e7ebe;
+
+    .icon-container {
+      background-color: #436faa;
+    }
+  }
+
+  &.google {
+    background-color: #ea4335;
+
+    .icon-container {
+      background-color: #d0382b;
+    }
+  }
+
+  .icon-container {
+    height: 100%;
+    width: 50px;
+    border-right: none;
+
+    @include border-radius($spacing-1 0 0 $spacing-1);
+    @include center;
+
+    i {
+      color: #fff;
+    }
+  }
+
+  .text-container {
+    height: 100%;
+    width: 136px;
+
+    @include center;
+
+    label {
+      cursor: pointer;
+      color: #fff;
+      margin: 0;
+      text-transform: capitalize;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@import '../../../../shared/Colors';
+@import '../../../../shared/Variables';
+
+.patients-edit-confirm {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  color: $helper-grey !important;
+  border: 2px solid $helper-grey;
+}
+
+.patients-doctor-delete {
+  display: block;
+  position: absolute;
+}
+
+.patient-list-row {
+  color: $helper-grey;
+  border-bottom: 2px solid $medium-grey;
+  padding-top: $spacing-1;
+  padding-bottom: $spacing-1;
+
+  .width-100 {
+    display: inline-block;
+    width: 100%;
+  }
+  .width-90 {
+    display: inline-block;
+    width: 90%;
+  }
+  .width-40 {
+    display: inline-block;
+    width: 40%;
+  }
+  .width-30 {
+    display: inline-block;
+    width: 30%;
+  }
+  .width-10 {
+    display: inline-block;
+    width: 10%;
+  }
+  .patients-list-raw-vezeeta-blue {
+    cursor: pointer;
+    label {
+      color: $vezeeta-blue;
+    }
+  }
+  .patients-list-raw-helper-grey {
+    label {
+      color: $helper-grey;
+    }
+  }
+  .patients-list-raw-medium-grey {
+    label {
+      color: $medium-grey;
+    }
+  }
+  .patients-list-icon {
+    display: inline-block;
+    margin: 0 auto;
+    padding: $spacing + px;
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+  }
+
+  .patients-list-icon > svg {
+    margin: 0 auto;
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+}
+
+.patient-list {
+  word-wrap: break-word;
+}

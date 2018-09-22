@@ -1,0 +1,119 @@
+@import '../shared/Colors';
+@import '../shared/Mixins';
+@import '../shared/FontSizes';
+@import '../shared/Variables';
+
+header {
+  height: 60px;
+  background-color: $vezeeta-blue;
+
+  @include center-vertical;
+
+  .header-container {
+    justify-content: space-around;
+    height: 100%;
+    padding: 0;
+
+    @include center-vertical;
+
+    .logo-container {
+      padding: 0;
+
+      .logo {
+        width: 141px;
+        opacity: 0;
+        transition: opacity 150ms ease;
+        cursor: pointer;
+      }
+    }
+
+    .menu-container {
+      padding: 0;
+      line-height: 40px;
+
+      .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 0;
+        list-style: none;
+
+        .item {
+          position: relative;
+          cursor: pointer;
+          padding: 0 14px;
+          border-radius: $spacing-1;
+          outline: none;
+
+          @include center-vertical;
+          /* Temp fix */
+
+          &:first-child {
+            margin: 0;
+            padding: 0 0 0 14px;
+          }
+
+          &:last-child {
+            margin: 0;
+            padding: 0 0 0 14px;
+          }
+
+          &.profile-photo {
+            cursor: initial;
+            padding: 0;
+          }
+
+          &.lang {
+            a {
+              font-family: TheSans;
+              border: 1px solid #fff;
+              padding: $spacing-1 15px 7px;
+              @include border-radius(2px);
+            }
+          }
+
+          a {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 500;
+            color: #fff !important;
+            text-decoration: none;
+
+            @include desktop {
+              font-size: $subheading-en;
+
+              &:lang(ar) {
+                font-size: $subheading-ar;
+              }
+            }
+
+            @include mobile {
+              font-size: $subheading-en--mobile;
+
+              &:lang(ar) {
+                font-size: $subheading-ar--mobile;
+              }
+            }
+          }
+        }
+      }
+
+      &.logged-in {
+        .menu {
+          .item {
+            cursor: initial;
+
+            &:first-child {
+              margin: 0;
+              padding: 0 14px;
+            }
+
+            &:last-child {
+              margin: 0;
+              padding: 0 0 0 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

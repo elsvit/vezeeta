@@ -1,0 +1,216 @@
+@import '../../shared/Colors';
+@import '../../shared/Mixins';
+@import '../../shared/Variables';
+
+.hide {
+  display: none;
+}
+
+$track-color: $medium-grey;
+$thumb-color: $vezeeta-blue;
+
+$thumb-radius: 100%;
+$thumb-height: 10px;
+$thumb-width: 10px;
+$thumb-shadow-size: 1px;
+$thumb-shadow-blur: 1px;
+$thumb-shadow-color: $vezeeta-blue;
+$thumb-border-width: 1px;
+$thumb-border-color: $vezeeta-blue;
+
+$track-width: 100%;
+$track-height: 3px;
+$track-shadow-size: 0px;
+$track-shadow-blur: 0px;
+$track-shadow-color: $medium-grey;
+$track-border-width: 1px;
+$track-border-color: none;
+
+$track-radius: 5px;
+$contrast: 5%;
+
+input[type='range'] {
+  -webkit-appearance: none;
+  margin: $thumb-height / 2 0;
+  width: $track-width;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-slider-runnable-track {
+    border-radius: $track-radius;
+    border: $track-border-width solid $track-border-color;
+
+    @include horizontal-linear-gradient(right, left, $medium-grey, 50, $vezeeta-blue, 50);
+    @include track($track-width, $track-height);
+    @include box-shadow($track-shadow-size $track-shadow-size $track-shadow-blur $track-shadow-color 0px 0px $track-shadow-size lighten($track-shadow-color, 5%));
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: (($track-height) / 2) - ($thumb-height / 2) - 0.5;
+
+    @include thumb($thumb-border-width, $thumb-border-color, $thumb-height, $thumb-width, $thumb-radius, $thumb-color);
+  }
+
+  &:focus::-webkit-slider-runnable-track {
+    @include horizontal-linear-gradient(right, left, $medium-grey, 50, $vezeeta-blue, 50);
+  }
+
+  &::-moz-range-track {
+    border-radius: $track-radius;
+    border: $track-border-width solid $track-border-color;
+
+    @include horizontal-linear-gradient(right, left, $medium-grey, 50, $vezeeta-blue, 50);
+    @include track($track-width, $track-height);
+    @include box-shadow($track-shadow-size $track-shadow-size $track-shadow-blur $track-shadow-color 0px 0px $track-shadow-size lighten($track-shadow-color, 5%));
+  }
+  &::-moz-range-thumb {
+    @include thumb($thumb-border-width, $thumb-border-color, $thumb-height, $thumb-width, $thumb-radius, $thumb-color);
+  }
+
+  &::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: $thumb-width 0;
+    color: transparent;
+
+    @include horizontal-linear-gradient(right, left, $medium-grey, 50, $vezeeta-blue, 50);
+    @include track($track-width, $track-height);
+  }
+
+  &::-ms-fill-lower {
+    background: darken($track-color, $contrast);
+    border: $track-border-width solid $track-border-color;
+    border-radius: $track-radius*2;
+
+    @include box-shadow($track-shadow-size $track-shadow-size $track-shadow-blur $track-shadow-color 0px 0px $track-shadow-size lighten($track-shadow-color, 5%));
+  }
+  &::-ms-fill-upper {
+    background: $track-color;
+    border: $track-border-width solid $track-border-color;
+    border-radius: $track-radius*2;
+
+    @include box-shadow($track-shadow-size $track-shadow-size $track-shadow-blur $track-shadow-color 0px 0px $track-shadow-size lighten($track-shadow-color, 5%));
+  }
+  &::-ms-thumb {
+    @include thumb($thumb-border-width, $thumb-border-color, $thumb-height, $thumb-width, $thumb-radius, $thumb-color);
+  }
+  &:focus::-ms-fill-lower {
+    background: $track-color;
+  }
+  &:focus::-ms-fill-upper {
+    background: lighten($track-color, $contrast);
+  }
+}
+
+.crop-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .crop-image-tool-container {
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+
+    @include transform(translate(-50%, -50%));
+    @include border-radius(2px);
+
+    input[type='file'] {
+      display: none;
+    }
+
+    .header {
+      justify-content: space-between;
+      padding: 11px 10px;
+
+      @include center-vertical;
+
+      .back-btn,
+      .close-btn {
+        height: 24px;
+        width: 24px;
+        background-color: transparent;
+        border: 0;
+        outline: none;
+
+        @include center;
+        @include box-shadow(none);
+        @include border-radius(2px);
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.07);
+        }
+      }
+
+      .title {
+        font-size: 16px;
+        font-weight: 600;
+        color: $default-grey;
+        margin: 0 10px;
+      }
+    }
+
+    .crop-area-container {
+      position: relative;
+
+      #image-guide-lines {
+        position: absolute;
+        pointer-events: none;
+        top: 50px;
+        left: 50px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+    }
+
+    .zoom-range-container {
+      padding: 6px $spacing-4 $spacing-2;
+
+      @include center-vertical;
+
+      .zoomLabel {
+        font-size: 13px;
+        font-weight: 500;
+        margin-right: $spacing-4;
+      }
+    }
+
+    .btns-container {
+      padding: 0px 10px $spacing-4;
+
+      @include center;
+
+      .button-container {
+        margin: 0;
+
+        &:first-child {
+          margin-right: $spacing-2;
+        }
+
+        &:last-child {
+          margin-left: $spacing-2;
+        }
+
+        .text-container {
+          min-width: 126px;
+        }
+
+        button {
+          &.btn {
+            min-width: 126px;
+          }
+        }
+      }
+    }
+  }
+}

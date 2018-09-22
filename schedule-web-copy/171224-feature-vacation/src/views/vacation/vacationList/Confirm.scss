@@ -1,0 +1,48 @@
+@import '../../../shared/Variables';
+@import '../../../shared/Colors';
+@import '../../../shared/FontSizes';
+
+.confirm-info-container {
+  position: relative;
+  padding: $spacing-8 $spacing-3;
+  .modal-buttons-container {
+    margin: $spacing-6 $spacing-5;
+    padding-left: $spacing-2;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+
+    .btn-container--ghost {
+      height: 48px;
+      max-width: none;
+      width: 45%;
+      border: 2px solid $helper-grey;
+      margin-right: 4px;
+
+      .text-container {
+        min-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+
+        label {
+          font-size: $title-en;
+          margin-left: $spacing-2;
+          letter-spacing: 1px;
+          text-align: center;
+          width: fit-content;
+        }
+      }
+    }
+
+    .btn {
+      width: 55%;
+      height: 48px;
+      font-size: $title-en;
+      min-width: fit-content;
+      label {
+        font-size: $title-en;
+      }
+    }
+  }
+}

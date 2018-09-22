@@ -1,0 +1,43 @@
+@import '../../../shared/Colors';
+@import '../../../shared/Variables';
+@import '../../../shared/FontSizes';
+
+.passed {
+  opacity: 0.4;
+}
+
+.horizontal {
+  display: flex;
+  margin-left: -75%;
+  position: relative;
+  color: $helper-grey;
+  opacity: 0.6;
+  font-weight: 700;
+
+  &::before,
+  &::after {
+    color: #fff;
+    content: '';
+    flex: 1;
+    border-bottom: groove 2px;
+    margin: auto 0.25em;
+    box-shadow: 0 -1px;
+  }
+}
+
+.separator {
+  border-top: 1px solid $helper-grey;
+  opacity: 0.6;
+  margin: 10px 0;
+}
+
+.vacation-list {
+  position: relative;
+}
+
+.vacation-loading {
+  display: block;
+  margin: 12px auto;
+  width: fit-content;
+}
+

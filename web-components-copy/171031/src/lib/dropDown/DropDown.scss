@@ -1,0 +1,74 @@
+@import '../shared/Colors';
+@import '../shared/Mixins';
+@import '../shared/FontSizes';
+@import '../shared/Variables';
+
+.drop-down {
+  @include center;
+
+  .value-placeholder {
+    outline: 0;
+    cursor: pointer;
+
+    @include center;
+    img {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    span {
+      color: #fff;
+      font-weight: 500;
+
+      @include desktop {
+        font-size: $subheading-en;
+
+        &:lang(ar) {
+          font-size: $subheading-ar;
+        }
+      }
+
+      @include mobile {
+        font-size: $subheading-en--mobile;
+
+        &:lang(ar) {
+          font-size: $subheading-ar--mobile;
+        }
+      }
+    }
+  }
+
+  .list {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    position: absolute;
+    z-index: 1;
+    padding: 0;
+    background-color: #fff;
+    border: 1px solid $medium-grey;
+    border-radius: 2px;
+    top: $spacing-11;
+    right: auto;
+    justify-content: center;
+
+    .drop-down-item {
+      margin: 0;
+      padding: 0 $spacing-3;
+      display: inherit;
+      width: 100%;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $light-grey;
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

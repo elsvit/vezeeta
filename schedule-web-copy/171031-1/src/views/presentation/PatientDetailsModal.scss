@@ -1,0 +1,17 @@
+.ReactModal__Content {
+  width: 40%;
+  margin: 0 auto;
+  padding: 15px !important;
+  .pat-res {
+    padding: 20px 0;
+  }
+  .patient-reservations-header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #e0e0e0;
+  }
+  img {
+    padding: 0 10px;
+  }
+}

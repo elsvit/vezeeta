@@ -1,0 +1,26 @@
+@import '../../shared/Variables';
+@import '../../shared/Colors';
+@import '../../shared/FontSizes';
+
+.schedule-card .list--title-container {
+  padding: $spacing-6 $spacing-6 $spacing-5 $spacing-11;
+  display: -webkit-flex;
+  display: flex;
+  margin: 0;
+
+  button {
+    height: 44px;
+    width: 209px;
+    label {
+      font-size: $heading-en;
+    }
+  }
+}
+
+.appointments-list-container {
+  padding: $spacing-7 0 $spacing-6 $spacing-12;
+}
+
+.patient-search-container {
+  width: 75%;
+}

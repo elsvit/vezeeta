@@ -1,0 +1,80 @@
+@import '../base/Colors';
+@import '../base/FontSizes';
+@import '../base/Mixins';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label,
+span,
+a,
+li,
+button {
+  font-family: SourceSansPro;
+  color: $default-grey;
+
+  @include disable-user-select;
+
+  &:lang(ar) {
+    font-family: TheSans;
+  }
+
+  &.title {
+    font-weight: 600;
+    font-size: $title-en;
+
+    &:lang(ar) {
+      font-size: $title-ar;
+    }
+  }
+
+  &.subheading {
+    font-weight: normal;
+
+    @include desktop {
+      font-size: $subheading-en;
+
+      &:lang(ar) {
+        font-size: $subheading-ar;
+      }
+    }
+
+    @include mobile {
+      font-size: $subheading-en--mobile;
+
+      &:lang(ar) {
+        font-size: $subheading-ar--mobile;
+      }
+    }
+  }
+
+  &.body {
+    @include desktop {
+      font-size: $body-en;
+
+      &:lang(ar) {
+        font-size: $body-ar;
+      }
+    }
+
+    @include mobile {
+      font-size: $body-en--mobile;
+
+      &:lang(ar) {
+        font-size: $body-ar--mobile;
+      }
+    }
+  }
+
+  &.caption {
+    font-size: $caption-en;
+
+    &:lang(ar) {
+      font-size: $caption-ar;
+    }
+  }
+}

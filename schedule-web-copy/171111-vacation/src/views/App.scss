@@ -1,0 +1,47 @@
+@import '../shared/Variables';
+@import '../shared/Mixins';
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  @include border-radius(4px);
+
+  background-color: #fff;
+  padding: $spacing-5;
+}
+
+.schedule-card {
+  @include display-grid;
+  @include grid-columns(280px 1fr);
+
+  width: 100%;
+  grid-gap: $spacing-5;
+}
+
+.list--container {
+  border-radius: 5px;
+  border: 1px solid $medium-grey;
+}
+
+.list--title-container {
+  align-items: center;
+  border-bottom: 1px solid $medium-grey;
+  display: flex;
+  justify-content: space-between;
+  padding: $spacing-5;
+}
+
+.list--title {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.filter-placeholder {
+  font-weight: 500 !important;
+}

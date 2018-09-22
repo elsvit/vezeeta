@@ -1,0 +1,29 @@
+@import '../../shared/Variables';
+@import '../../shared/Colors';
+@import '../../shared/Mixins';
+
+.filter {
+  .filter-section {
+    &:first-of-type {
+      @include border-radius(5px 5px 0 0);
+
+      border-top: 1px solid $medium-grey;
+    }
+
+    .filter-item {
+      align-items: center;
+      display: flex;
+      margin-bottom: $spacing-3;
+    }
+  }
+
+  .photo {
+    height: 30px;
+    margin-right: $spacing-3;
+    width: 30px;
+  }
+
+  .text {
+    height: 30px;
+  }
+}

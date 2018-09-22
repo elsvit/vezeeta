@@ -1,0 +1,240 @@
+@import '../../shared/Colors';
+@import '../../shared/Mixins';
+@import '../../shared/Variables';
+@import '../../shared/FontSizes';
+
+.working-hours-container {
+  flex: 1 1;
+
+  .filter-container {
+    margin-right: $spacing-6;
+    max-width: 260px;
+    min-width: 260px;
+  }
+
+  .room-container {
+    @include border-radius(5px);
+
+    border: 2px solid $medium-grey;
+    flex-grow: inherit;
+    min-height: 550px;
+    position: relative;
+
+    .block-veez {
+      .block-veez-text {
+        color: $helper-grey;
+        font-weight: 500;
+        margin: 0 0 $spacing-4;
+      }
+
+      &.combo-box {
+        margin: $spacing-4 0 $spacing-4;
+
+        .placeholder-img {
+          display: none;
+        }
+
+        &.combo-box--no-icon svg {
+          display: flex;
+        }
+      }
+    }
+
+    .loading {
+      @include center;
+
+      background-color: rgba(255, 255, 255, 0.5);
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 99;
+    }
+
+    .room-title-container {
+      @include center-vertical;
+
+      border-bottom: 2px solid $medium-grey;
+      justify-content: space-between;
+      padding: $spacing-1 $spacing-7 $spacing-4;
+
+      .top {
+        @include center-vertical;
+      }
+
+      .room-titles-container {
+        .room-title {
+          color: $helper-grey;
+          margin: 0 $spacing-8 0 0;
+        }
+
+        .doctor-name {
+          color: rgba($helper-grey, 0.6);
+          font-weight: 400;
+          margin: 0 $spacing-6 0 0;
+        }
+      }
+
+      .radio-button-list {
+        margin-right: $spacing-5;
+
+        label {
+          font-size: $subheading-en;
+          line-height: $subheading-en;
+          padding: 0 $spacing-7;
+        }
+
+        .check {
+          height: 18px;
+          width: 18px;
+
+          &::before {
+            height: 8px;
+            left: 3px;
+            top: 3px;
+            width: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .week-container {
+    padding: $spacing-6;
+
+    .day {
+      border: 2px solid $medium-grey;
+      border-bottom: 0;
+
+      &:first-child {
+        @include border-radius(5px 5px 0 0);
+      }
+
+      &:last-child {
+        @include border-radius(0 0 5px 5px);
+
+        border-bottom: 2px solid $medium-grey;
+      }
+
+      &.disable {
+        .day-title-container {
+          border-bottom: 0;
+        }
+      }
+
+      .day-title-container {
+        @include center-vertical;
+
+        background-color: $light-grey;
+        border-bottom: 2px solid $medium-grey;
+        justify-content: space-between;
+        padding: $spacing-5 $spacing-8;
+
+        .day-title {
+          margin: 0;
+        }
+      }
+    }
+
+    .shifts-container {
+      padding: $spacing-6 $spacing-15 $spacing-6 $spacing-8;
+      position: relative;
+
+      .shift {
+        margin-bottom: $spacing-6;
+
+        .shift-details {
+          @include border-radius(3px);
+
+          border: 2px dashed $medium-grey;
+          margin-right: $spacing-4;
+          padding: $spacing-8;
+          width: 93%;
+
+          .combo-box {
+            margin: 0;
+
+            &.combo-box--no-icon svg {
+              display: flex;
+            }
+          }
+
+          .row-1,
+          .row-2 {
+            justify-content: end;
+            width: 100%;
+
+            .col-1 {
+              justify-content: end;
+              margin-right: $spacing-10;
+            }
+          }
+
+          .row-1 {
+            @include display-inline-grid;
+            @include grid-columns(65% 35%);
+
+            margin-bottom: $spacing-7;
+
+            .col-1 {
+              @include display-inline-grid;
+              @include grid-columns(45% 10% 45%);
+            }
+
+            .to {
+              @include center;
+
+              color: $helper-grey;
+              font-weight: 500;
+              margin: 0;
+            }
+          }
+
+          .row-2 {
+            @include display-inline-grid;
+            @include grid-columns(100%);
+
+            .col-1 {
+              @include display-inline-grid;
+              @include grid-columns(35% 35%);
+
+              margin-right: 0;
+            }
+
+            .visit-type-text {
+              @include center-vertical;
+
+              color: $helper-grey;
+              font-weight: 500;
+              justify-content: flex-end;
+              margin: 0;
+              margin-right: $spacing-3;
+            }
+          }
+        }
+
+        .remove {
+          @include center;
+
+          border: 1px solid $vezeeta-blue;
+          border-radius: 50%;
+          color: $vezeeta-blue;
+          cursor: pointer;
+          height: 40px;
+          width: 40px;
+
+          &:hover {
+            background-color: $vezeeta-blue;
+
+            svg {
+              path {
+                fill: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

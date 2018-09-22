@@ -1,0 +1,85 @@
+@import '../../shared/Mixins';
+@import '../../shared/Colors';
+@import '../../shared/Variables';
+
+.slider {
+  position: relative;
+  margin-bottom: $spacing-12;
+  margin: 0 $spacing-20;
+  overflow: hidden;
+
+  .slider-control {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    height: 100%;
+    width: 32px;
+    background-color: #fff;
+    border: 0;
+    outline: none;
+
+    @include center;
+    @include box-shadow(none);
+    @include border-radius(2px);
+    @include transform(translateY(-50%));
+
+    &.control--left {
+      left: 0px;
+
+      .control--left {
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        z-index: 5;
+        height: 32px;
+        width: 32px;
+        background-color: #fff;
+        border: 0;
+        outline: none;
+
+        @include center;
+        @include box-shadow(none);
+        @include border-radius(50%);
+        @include transform(translateY(-50%));
+      }
+    }
+
+    &.control--right {
+      right: 0px;
+
+      .control--right {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        z-index: 5;
+        height: 32px;
+        width: 32px;
+        background-color: #fff;
+        border: 0;
+        outline: none;
+
+        @include center;
+        @include box-shadow(none);
+        @include border-radius(50%);
+        @include transform(translateY(-50%));
+      }
+    }
+  }
+
+  .wrapper {
+    &.slides {
+      position: relative;
+      padding: $spacing-1 0;
+      margin: 0 auto;
+
+      @include center;
+
+      .slide {
+        width: 100%;
+        padding: 0 $spacing-17;
+
+        @include center;
+      }
+    }
+  }
+}

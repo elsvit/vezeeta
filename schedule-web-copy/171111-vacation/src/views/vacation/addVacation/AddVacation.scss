@@ -1,0 +1,183 @@
+@import '../../../shared/Variables';
+@import '../../../shared/Colors';
+@import '../../../shared/FontSizes';
+
+.modal-container {
+  margin: 40px auto !important;
+  width: 500px !important;
+}
+
+.tab-container {
+  h3 {
+    font-size: 20px;
+    font-weight: 800 !important;
+  }
+}
+
+.add-vacation-tab {
+  position: relative;
+  width: 500px;
+  height: 55px;
+  margin: $spacing-4 auto;
+  background-color: white;
+  z-index: 20;
+}
+
+.add-vacation-header{
+  border-bottom: 2px solid $light-grey;
+  padding: $spacing-3;
+  box-sizing: border-box;
+}
+
+.add-vacation-header-link {
+  margin: 0 $spacing-1;
+  opacity: .5;
+  cursor: pointer;
+  margin-bottom: -2px;
+}
+
+.add-vacation-header-active {
+  opacity: 1;
+  border-bottom: 2px solid $blue-two;
+  padding-bottom: $spacing-3;
+}
+
+.add-vacation-header-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.add-vacation-form-active {
+  display: inline-block;
+  width: 100%;
+  height: 550px;
+  background-color: white;
+  padding: $spacing-3;
+}
+
+.add-vacation-branch-active {
+  display: inline-block;
+  width: 100%;
+  //height: 430px;
+  background-color: white;
+  padding: $spacing-3;
+}
+
+.add-vacation-doctor-active {
+  display: inline-block;
+  width: 100%;
+  //height: 510px;
+  background-color: white;
+  padding: $spacing-3;
+}
+
+.add-vacation-form-hide {
+  display: none;
+}
+
+.add-vacation-branch-block,
+.add-vacation-doctor-block {
+  display: block;
+  width: 100%;
+  padding: $spacing-1;
+}
+
+.vacation-helper-block-center {
+  color: $helper-grey;
+  text-align: center;
+}
+
+.add-vacation-subblock-100 {
+  display: inline-block;
+  width: 100%;
+  padding: $spacing-1 $spacing-1;
+}
+
+.add-vacation-subblock-50-left {
+  width: 50%;
+  float: left;
+  padding: $spacing-1 $spacing-3 $spacing-1 $spacing-1;
+
+}
+
+.add-vacation-subblock-50-right {
+  width: 50%;
+  float: right;
+  padding: $spacing-1 $spacing-1 $spacing-1 $spacing-3;
+}
+
+.add-vacation-button-40 {
+  float: left;
+  display: inline-block;
+  width: 40%;
+  margin: 0;
+  padding: $spacing-3;
+  button {
+    width: 100%;
+  }
+  label {
+    font-size: 18px;
+  }
+}
+
+.add-vacation-button-60 {
+  float: left;
+  display: inline-block;
+  width: 60%;
+  margin: 0;
+  padding: $spacing-3;
+  overflow: hidden;
+  button {
+    width: 100%;
+  }
+  label {
+    font-size: 18px;
+  }
+}
+
+.add-vacation-button-add-wait {
+  opacity: 0.3 !important;
+  cursor: wait !important;
+  background-color: $helper-grey !important;
+}
+
+.add-vacation-button-cancel {
+  background-color: white !important;
+  color: $helper-grey !important;
+  border: 2px solid $helper-grey;
+  label {
+    font-size: $heading-en;
+    font-weight: 600;
+  }
+}
+
+.input-date-label-class {
+  font-size: $heading-en;
+}
+
+.add-vacation-separator {
+  width: 100%;
+  padding: 1px $spacing-3;
+  border-bottom: 1px solid $medium-grey;
+}
+
+.input-date-text {
+  label {
+    color: $helper-grey;
+    font-weight: 600;
+  }
+}
+
+.add-vacation-checkbox {
+  label {
+    font-size: 20px;
+    font-weight: 600;
+    color: $helper-grey;
+  }
+  .checkbox {
+    display: inherit;
+    margin-top: $spacing-1;
+  }
+}

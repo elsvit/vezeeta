@@ -1,0 +1,64 @@
+@import '../../shared/FontSizes';
+@import '../../shared/Mixins';
+@import '../../shared/Colors';
+@import '../../shared/Variables';
+
+.btn-container--ghost {
+  display: inline-flex;
+  align-items: center;
+  max-width: 240px;
+  cursor: pointer;
+  border: 1px solid $helper-grey;
+
+  &.btn-container--disabled {
+    opacity: 0.5;
+  }
+
+  @include border-radius(2px);
+
+  @include desktop {
+    font-size: $body-en;
+    height: $button-height--desktop;
+
+    &:lang(ar) {
+      font-size: $body-ar;
+    }
+  }
+
+  @include mobile {
+    font-size: $body-en--mobile;
+    height: button-height--mobile;
+
+    &:lang(ar) {
+      font-size: $body-ar--mobile;
+    }
+  }
+
+  .icon-container {
+    height: 100%;
+    width: 50px;
+    border-right: 1px solid $helper-grey;
+
+    @include border-radius($spacing-1 0 0 $spacing-1);
+    @include center;
+
+    i {
+      color: $default-grey;
+    }
+  }
+
+  .text-container {
+    height: 100%;
+    min-width: 165px;
+
+    @include center;
+
+    label {
+      color: $default-grey;
+      cursor: pointer;
+      margin: 0;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+  }
+}

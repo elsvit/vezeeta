@@ -1,0 +1,133 @@
+@import '../../shared/Colors';
+@import '../../shared/Mixins';
+@import '../../shared/Variables';
+
+.radio-button-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &.flex-row {
+    height: 30px;
+
+    .lazy-loading {
+      @include center-vertical;
+
+      div {
+        margin-right: $spacing-2;
+      }
+    }
+  }
+
+  &.flex-col {
+    .lazy-loading {
+      @include center-horizontal;
+
+      div {
+        margin-bottom: $spacing-2;
+
+        .text {
+          width: 120px;
+        }
+      }
+    }
+
+    li {
+      margin-bottom: $spacing-6;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  .lazy-loading {
+    div {
+      display: flex;
+      direction: row;
+
+      .circle {
+        background-color: $light-grey;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-right: $spacing-2;
+      }
+
+      .text {
+        background-color: $light-grey;
+        width: 80px;
+        height: 20px;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  li {
+    color: $default-grey;
+    position: relative;
+
+    @include center-vertical;
+
+    &:hover {
+      .check {
+        border: 2px solid $medium-grey;
+      }
+    }
+
+    input[type='radio'] {
+      position: absolute;
+      visibility: hidden;
+
+      &:checked ~  {
+        .check {
+          border: 2px solid $medium-grey;
+
+          &::before {
+            background: $vezeeta-blue;
+          }
+        }
+      }
+    }
+
+    label {
+      position: relative;
+      font-weight: 300;
+      padding: 0 $spacing-8;
+      z-index: 9;
+      cursor: pointer;
+
+      @include center-vertical;
+
+      svg {
+        margin-right: $spacing-4;
+      }
+    }
+
+    .check {
+      position: absolute;
+      top: 50%;
+      border: 2px solid $medium-grey;
+      border-radius: 100%;
+      height: 15px;
+      width: 15px;
+      z-index: 5;
+
+      @include transform(translateY(-50%));
+
+      &::before {
+        display: block;
+        position: absolute;
+        content: '';
+        border-radius: 100%;
+        height: 7px;
+        width: 7px;
+        top: 2px;
+        left: 2px;
+        margin: auto;
+        transition: background 0.15s linear;
+        -webkit-transition: background 0.15s linear;
+      }
+    }
+  }
+}

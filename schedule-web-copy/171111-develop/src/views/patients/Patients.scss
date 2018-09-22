@@ -1,0 +1,33 @@
+@import '../../shared/Variables';
+@import '../../shared/Colors';
+
+#Patients {
+  border: 2px solid $light-grey;
+  border-radius: $spacing-1;
+
+  .fs-16 {
+    font-size: 16px;
+  }
+  .fs-18 {
+    font-size: 18px;
+  }
+  .fs-20 {
+    font-size: 20px;
+  }
+  .patients-header{
+    display: block;
+    height: 100%;
+    border-bottom: 2px solid $light-grey;
+    padding: $spacing-3 0;
+  }
+  .patients-search {
+    margin: $spacing-1 $spacing-1 $spacing-1 $spacing-5;
+  }
+  .patients-button {
+    margin: $spacing-1 auto;
+  }
+  .patients-button > button {
+    display: inherit;
+    margin: 0 auto;
+  }
+}

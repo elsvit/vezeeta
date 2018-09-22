@@ -1,0 +1,127 @@
+@import '../../../shared/Colors';
+@import '../../../shared/Variables';
+@import '../../../shared/FontSizes';
+
+$header-height: 30px;
+$font-size-select: 16px;
+$font-weight-select: 600;
+
+@mixin select-wrapper-mixin {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  background-color: white;
+  font-size: $font-size-select;
+  font-weight: $font-weight-select;
+  color: $helper-grey;
+}
+@mixin select-header-mixin {
+  position: relative;
+  border-bottom: 1px solid $medium-grey;
+}
+@mixin select-selected-mixin {
+  width: 100%;
+  height: $header-height;
+  overflow: hidden;
+  border: none;
+  padding: 8px 20px 8px 2px;
+  cursor: pointer;
+}
+@mixin select-icon-mixin {
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  > svg {
+    display: block;
+    margin: 50% auto;
+  };
+}
+.select-wrapper {
+  @include select-wrapper-mixin;
+  cursor: pointer;
+
+  .select-header {
+    @include select-header-mixin;
+  }
+}
+
+.select-under-header {
+  width: 100%;
+  position: relative;
+}
+.select-under-header-hide {
+  display: none;
+}
+.select-selected {
+  @include select-selected-mixin;
+}
+.select-icon {
+  @include select-icon-mixin;
+}
+.select-rows-style {
+  display: table;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid $light-grey;
+  padding: 2px;
+  width: 100%;
+  background-color: white;
+  height: 100%;
+  z-index: 300;
+}
+
+.select-rows-style select {
+  padding: 5px 8px;
+  min-width: 70px;
+  width: 100%;
+  max-width: 180%;
+  border: none;
+  box-shadow: none;
+  background-color: white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  z-index: 300;
+  :hover {
+    background-color: $light-grey;
+  }
+  > option:checked {
+    background-color: $blue-two;
+    color: white;
+  }
+}
+
+.select-rows-style select:focus {
+  outline: none;
+}
+
+.select-wrapper-disabled {
+  @include select-wrapper-mixin;
+  opacity: 0.5;
+  cursor: not-allowed;
+
+  .select-header {
+    @include select-header-mixin;
+  }
+  .select-selected {
+    @include select-selected-mixin;
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .select-icon {
+    @include select-icon-mixin;
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .select-under-header,
+  .select-rows-style,
+  .select-rows-style-hide {
+    display: none;
+  }
+}

@@ -1,0 +1,111 @@
+@import '../../../../shared/Colors';
+@import '../../../../shared/Variables';
+@import '../../../../shared/FontSizes';
+
+.vacation-list-row {
+  position: relative;
+  color: $helper-grey;
+  border-bottom: 2px solid $medium-grey;
+  padding-top: $spacing-1;
+  padding-bottom: $spacing-1;
+  label {
+    color: $helper-grey;
+  }
+  .right-icon {
+    padding-left: 0;
+    float: right;
+  }
+}
+
+.vacation-list-raw {
+  margin: 0;
+}
+
+.vacation-list-raw-helper-grey {
+  label {
+    color: $helper-grey;
+  }
+}
+
+.vacation-list-raw-medium-grey {
+  label {
+    color: $medium-grey;
+  }
+}
+
+.vacation-row-left {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.vacation-list-icon {
+  -ms-flex-align: center;
+  align-items: center;
+  border: 2px solid $blue-one;
+  border-radius: 50%;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: flex;
+  grid-area: delete;
+  height: 44px;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 44px;
+  float: right;
+}
+
+.vacation-del-confirm-hide {
+  display: none;
+}
+
+.vacation-del-confirm-show {
+  position: absolute;
+  top: 0px;
+  right: 17px;
+  width: 70%;
+  background-color: white;
+  color: $helper-grey !important;
+  border: 2px solid $helper-grey;
+  z-index: 100;
+  min-width: fit-content;
+
+  .vacation-doctor-delete {
+    display: block;
+    position: absolute;
+  }
+
+  .vacation-list-icon {
+    display: inline-block;
+    margin: 0 auto;
+    padding: $spacing + px;
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+  }
+
+  .vacation-list-icon > svg {
+    margin: 0 auto;
+    cursor: pointer;
+  }
+
+  .delete-vacation-button-right,
+  .delete-vacation-button-left {
+    margin: 0 auto;
+    padding: $spacing-2;
+    label {
+      font-size: $heading-en;
+    }
+  }
+
+  .delete-vacation-button-cancel {
+    background-color: white !important;
+    color: $helper-grey !important;
+    border: 2px solid $helper-grey;
+  }
+
+  .input-date-label-class {
+    font-size: $heading-en;
+  }
+}
+
+

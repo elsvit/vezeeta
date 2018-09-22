@@ -1,0 +1,6 @@
+web-utils: Vezeeta.Enterprise/_git/vezeeta-utils
+
+web-components: Vezeeta.Enterprise/_git/vezeeta-lib
+
+schedule-web: Vezeeta.Account.Web
+https://vezeeta-final.visualstudio.com/Vezeeta.Enterprise/_git/schedule-web

@@ -1,0 +1,92 @@
+@import '../../../shared/Colors';
+@import '../../../shared/Variables';
+@import '../../../shared/FontSizes';
+@import '../../../shared/Mixins';
+
+.confirmation-doctor-container {
+  border-bottom: 1px solid $medium-grey;
+  margin: 0 auto;
+  padding: $spacing-5 0;
+
+  .confirmation-doctor-name,
+  .confirmation-doctor-speciality {
+    letter-spacing: 0.5px;
+    margin: 0;
+  }
+
+  .confirmation-doctor-name {
+    font-weight: 500;
+  }
+
+  .confirmation-doctor-speciality {
+    color: $helper-grey;
+    margin-top: $spacing-1;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  &.no-animation {
+    border-bottom: 1px solid $medium-grey;
+
+    .doctor-name {
+      margin-bottom: $spacing-3;
+      width: 280px;
+    }
+
+    .doctor-room {
+      width: 220px;
+    }
+
+    .week-container {
+      @include center;
+
+      .week {
+        @include center-vertical;
+
+        padding: $spacing-5;
+
+        .photo {
+          height: 30px;
+          margin-right: $spacing-2;
+          width: 30px;
+        }
+
+        .text {
+          width: 100px;
+        }
+      }
+    }
+  }
+}
+
+.confirmation-doctor-weeks-container {
+  @include border-radius(4px);
+
+  background-color: rgba($light-grey, 0.6);
+  margin: $spacing-4 auto 0 auto;
+  padding: $spacing-3;
+  width: 100%;
+
+  .checkbox-list-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: inherit;
+
+    .checkbox-container {
+      font-weight: 500;
+      margin-bottom: 0;
+
+      &:first-child label {
+        font-weight: 600;
+      }
+    }
+
+    .checkbox-label {
+      letter-spacing: 0.5px;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@import '../../base/Mixins';
+@import '../../base/Colors';
+
+.social-buttons-container {
+  .btn-container {
+    height: 36px;
+    cursor: pointer;
+    margin: 0 12px;
+
+    @include border-radius(2px);
+    @include center-vertical;
+
+    &.facebook {
+      background-color: #4e7ebe;
+
+      .icon-container {
+        background-color: #436faa;
+      }
+    }
+
+    &.google {
+      background-color: #ea4335;
+
+      .icon-container {
+        background-color: #d0382b;
+      }
+    }
+
+    .icon-container {
+      height: 100%;
+      width: 50px;
+
+      @include border-radius(4px 0 0 4px);
+      @include center;
+
+      i {
+        color: #fff;
+      }
+    }
+
+    .text-container {
+      height: 100%;
+      width: 136px;
+
+      @include center;
+
+      label {
+        cursor: pointer;
+        color: #fff;
+        margin: 0;
+        text-transform: capitalize;
+        font-weight: 500;
+        letter-spacing: .5px;
+      }
+    }
+  }
+}

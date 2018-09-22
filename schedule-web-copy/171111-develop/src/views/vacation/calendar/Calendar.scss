@@ -1,0 +1,191 @@
+@import '../../../shared/Colors';
+//@import '../shared/Colors';
+//@import '../shared/Mixins';
+@import '../../../shared/Mixins';
+
+$calendar-width: 280px;
+$calendar-height: 326px;
+$calendar-header-height: 40px;
+$calendar-day-width: 40px;
+$calendar-day-height: 38px;
+$calendar-day-radius: 19px;
+$calendar-title-font-size: 17px;
+$calendar-font-size: 14px;
+$calendar-error-popup-height: 70px;
+$calendar-body-bg-color: #f6fbff;
+$calendar-light-color: #ffffff;
+
+.calendar-wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: $calendar-width;
+  height: $calendar-height;
+  margin: 0 auto;
+  font-family: SourceSansPro, Arial;
+  font-size: $calendar-font-size;
+  border: 2px solid $medium-grey;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: $calendar-light-color;
+}
+
+.calendar-header {
+  display: block;
+  position: relative;
+  width: 100%;
+  min-width: $calendar-width;
+  height: $calendar-header-height;
+  color: $vezeeta-blue;
+}
+.calendar-header-title {
+  display: block;
+  margin: 0 auto;
+  left: 50%;
+  text-align: center;
+  font-size: $calendar-title-font-size;
+  font-weight: 600;
+  line-height: $calendar-header-height;
+  color: $vezeeta-blue;
+  font-size: 17px;
+}
+
+.calendar-header-title-month,
+.calendar-header-title-year {
+  display: inline-block;
+  margin-left: 3px;
+  cursor: default;
+}
+
+.calendar-header-title-year-input {
+  @include border-radius(4px);
+
+  width: 45px;
+  height: 22px;
+  border: none;
+  background-color: transparent;
+  color: $vezeeta-blue;
+  font-size: 17px;
+  cursor: pointer;
+  padding: 4px;
+  text-align: center;
+  &:hover {
+    background-color: $light-grey;
+  }
+}
+
+.year--danger {
+  color: $vezeeta-red;
+}
+
+.calendar-left-arrow {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-size: 22px;
+  text-align: left;
+  color: $vezeeta-blue;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.calendar-right-arrow {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 22px;
+  text-align: right;
+  color: $vezeeta-blue;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.calendar-body {
+  display: block;
+  width: $calendar-width;
+  height: $calendar-height - $calendar-header-height;
+  background-color: $calendar-body-bg-color;
+  font-size: $calendar-font-size;
+  font-weight: 500;
+}
+
+.calendar-weekday,
+.calendar-day {
+  display: inline-block;
+  width: $calendar-day-width;
+  height: $calendar-day-height;
+  float: left;
+  text-align: center;
+  line-height: $calendar-day-height;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  color: $helper-grey;
+  cursor: default;
+}
+
+.calendar-day:not(.calendar-start-date):not(.calendar-end-date):not(.calendar-one-date):not(.calendar-diapason-date) {
+  cursor: pointer;
+  &:hover {
+    background-color: $medium-grey;
+    border-radius: 50%;
+  }
+}
+
+.calendar-start-date {
+  color: $calendar-light-color;
+  background-color: $vezeeta-blue;
+  border-top-left-radius: $calendar-day-radius;
+  border-bottom-left-radius: $calendar-day-radius;
+}
+
+.calendar-end-date {
+  color: $calendar-light-color;
+  background-color: $vezeeta-blue;
+  border-top-right-radius: $calendar-day-radius;
+  border-bottom-right-radius: $calendar-day-radius;
+}
+
+.calendar-one-date {
+  color: $calendar-light-color;
+  background-color: $vezeeta-blue;
+  border-radius: $calendar-day-radius;
+}
+
+.calendar-diapason-date {
+  color: $calendar-light-color;
+  background-color: $vezeeta-blue;
+}
+
+.calendar-opacity-50 {
+  opacity: 0.5;
+}
+
+.calendar-today {
+  color: $vezeeta-red;
+}
+
+@mixin calendar-error-popup {
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  height: $calendar-error-popup-height;
+  text-align: center;
+  line-height: $calendar-error-popup-height;
+  font-size: $calendar-font-size;
+  background-color: $calendar-light-color;
+  overflow: hidden;
+  transition: width 0.3s;
+  cursor: pointer;
+}
+
+.calendar-error-popup-hide {
+  @include calendar-error-popup;
+  width: 0;
+  border: none;
+}
+
+.calendar-error-popup-show {
+  @include calendar-error-popup;
+  width: 100%;
+  border: 1px solid $helper-grey;
+}

@@ -1,0 +1,47 @@
+@import '../base/Mixins';
+@import '../base/Colors';
+
+.signup-step {
+  margin-bottom: 48px;
+  padding: 0 48px;
+  display: flex;
+  flex-flow: row;
+
+  .back-container {
+    margin-right: 22px;
+
+    .back-btn {
+      padding: 0;
+      margin-top: 5px;
+      background-color: transparent;
+      border: 0;
+      outline: none;
+
+      @include center;
+      @include box-shadow(none);
+      @include border-radius(2px);
+    }
+
+    .reserve-back-btn {
+      width: 14px;
+    }
+  }
+
+  .content-container {
+    .title,
+    .subheading {
+      margin: 0;
+    }
+
+    .title {
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .subheading {
+      font-weight: 400;
+      color: $helper-grey;
+      line-height: normal;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@import '../../../shared/Colors';
+@import '../../../shared/Variables';
+@import '../../../shared/FontSizes';
+@import '../../../shared/Mixins';
+
+.confirmation-doctor-container {
+  border-bottom: 1px solid $medium-grey;
+  margin: 0 auto;
+  padding: $spacing-5 0;
+  width: 95%;
+
+  .confirmation-doctor-name,
+  .confirmation-doctor-speciality {
+    letter-spacing: 0.5px;
+    margin: 0;
+  }
+
+  .confirmation-doctor-name {
+    font-size: $heading-en;
+    font-weight: 500;
+  }
+
+  .confirmation-doctor-speciality {
+    color: $helper-grey;
+    font-size: $subheading-en;
+    margin-top: $spacing-2;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.confirmation-doctor-weeks-container {
+  @include border-radius(4px);
+
+  background-color: rgba($light-grey, 0.6);
+  margin: $spacing-4 auto 0 auto;
+  padding: $spacing-3;
+  width: 100%;
+
+  .checkbox-list-container {
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    width: inherit;
+    margin: 0 auto;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-align-items: center;
+
+    .checkbox-container {
+      font-weight: 500;
+      margin-bottom: 0;
+
+      &:first-child label {
+        font-weight: 600;
+      }
+    }
+
+    .checkbox-label {
+      letter-spacing: 0.5px;
+    }
+  }
+}

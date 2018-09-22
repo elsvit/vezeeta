@@ -1,0 +1,48 @@
+@import '../../../shared/FontSizes';
+@import '../../../shared/Variables';
+@import '../../../shared/Colors';
+
+.input-date {
+  position: relative;
+  width: 100%;
+
+  .calendar-close-icon-wrap {
+    width: 100%;
+  }
+  .calendar-close-icon {
+    display: inline-block;
+    float: right;
+    width: 16px;
+    height: 22px;
+    background-color: white;
+    cursor: pointer;
+    z-index: 200;
+  }
+  .input-date-icon {
+    display: inline-block;
+    float: left;
+    margin-top: $spacing-2;
+    cursor: pointer;
+  }
+  .input-date-text {
+    display: inline-block;
+    float: left;
+    margin: $spacing-1 $spacing-2;
+    cursor: pointer !important;
+    & label {
+      cursor: pointer !important;
+    }
+  }
+  .calendar-active {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 200;
+  }
+  .calendar-hide {
+    display: none;
+  }
+}
+

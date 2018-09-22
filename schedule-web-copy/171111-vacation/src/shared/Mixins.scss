@@ -1,0 +1,214 @@
+@import 'Breakpoints';
+@import 'Colors';
+
+/// Adds a browser prefix to the property
+/// @param {*} $property Property
+/// @param {*} $value Value
+
+@mixin css3-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -khtml-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+
+@mixin track($track-width, $track-height) {
+  width: $track-width;
+  height: $track-height;
+  cursor: pointer;
+  animate: 0.2s;
+}
+
+@mixin thumb($thumb-border-width, $thumb-border-color, $thumb-height, $thumb-width, $thumb-radius, $thumb-color) {
+  border: $thumb-border-width solid $thumb-border-color;
+  height: $thumb-height;
+  width: $thumb-width;
+  border-radius: $thumb-radius;
+  background: $thumb-color;
+  cursor: pointer;
+}
+
+// Transform
+@mixin transform($transform) {
+  transform: $transform;
+  -ms-transform: $transform;
+  -moz-transform: $transform;
+  -webkit-transform: $transform;
+}
+
+// Border radius
+
+/// Border Radius
+/// @param {Size} $radius [5px] - Radius
+/// @require {mixin} css3-prefix
+
+@mixin border-radius($radius) {
+  @include css3-prefix('border-radius', $radius);
+}
+
+// Box shadow
+@mixin box-shadow($shadow) {
+  @include css3-prefix('box-shadow', $shadow);
+}
+
+// Change placeholder color
+@mixin placeholder($color, $alignment:initial) {
+  $transistion-time: 200ms;
+
+  &.placeholder {
+    color: $color;
+    transition: all $transistion-time ease;
+    text-align: $alignment;
+  }
+
+  &:-moz-placeholder {
+    color: $color;
+    transition: all $transistion-time ease;
+    text-align: $alignment;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $color;
+    transition: all $transistion-time ease;
+    text-align: $alignment;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+    transition: all $transistion-time ease;
+    text-align: $alignment;
+  }
+}
+
+// Linear gradient
+@mixin horizontal-linear-gradient($from, $to, $from-color,$from-color-percentage, $to-color, $to-color-percentage) {
+  background-image: -ms-linear-gradient(
+    $from,
+    $from-color $from-color-percentage*1%,
+    $to-color $to-color-percentage*1%
+  );
+  background-image: -moz-linear-gradient(
+    $from,
+    $from-color $from-color-percentage*1%,
+    $to-color $to-color-percentage*1%
+  );
+  background-image: -o-linear-gradient(
+    $from,
+    $from-color $from-color-percentage*1%,
+    $to-color $to-color-percentage*1%
+  );
+  background-image: -webkit-linear-gradient(
+    $from,
+    $from-color $from-color-percentage*1%,
+    $to-color $to-color-percentage*1%
+  );
+  background-image: -webkit-gradient(
+    linear,
+    $from top,
+    $to top,
+    color-stop($from-color-percentage, $from-color),
+    color-stop($to-color-percentage, $to-color)
+  );
+  background-image: linear-gradient(
+    to $to,
+    $from-color $from-color-percentage*1%,
+    $to-color $to-color-percentage*1%
+  );
+}
+
+// @Media
+@mixin desktop {
+  @media (min-width: $md) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $md - 1) {
+    @content;
+  }
+}
+
+// Center elements inside a container
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin center-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin center-vertical {
+  display: flex;
+  align-items: center;
+}
+
+// Disable user-select
+@mixin disable-user-select() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// Display grid
+@mixin display-grid() {
+  display: grid;
+  display: -ms-grid;
+}
+
+@mixin display-inline-grid() {
+  display: inline-grid;
+  display: -ms-inline-grid;
+}
+
+@mixin grid-columns($columns) {
+  grid-template-columns: $columns;
+  -ms-grid-column: $columns;
+}
+
+@mixin grid-rows($rows) {
+  grid-template-rows: $rows;
+  -ms-grid-row: $rows;
+}
+
+@mixin transition($properties...) {
+  @include css3-prefix('transition', $properties);
+}
+
+/// Keyframes
+/// @param {*} $animation-name - Animation name
+/// @content [Animation css]
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+/// Animation
+/// @param {*} $str - name duration timing-function delay iteration-count direction fill-mode play-state ([http://www.w3schools.com/cssref/css3_pr_animation.asp](http://www.w3schools.com/cssref/css3_pr_animation.asp))
+/// @require {mixin} css3-prefix
+
+@mixin animation($str) {
+  @include css3-prefix('animation', $str);
+}

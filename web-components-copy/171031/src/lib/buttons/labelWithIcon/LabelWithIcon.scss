@@ -1,0 +1,25 @@
+@import '../../shared/Colors';
+@import '../../shared/Mixins';
+@import '../../shared/Variables';
+
+.label-with-icon {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+
+  .icon-container {
+    border: 1px solid $vezeeta-blue;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    margin-right: $spacing-4;
+
+    @include center;
+  }
+
+  label {
+    color: $vezeeta-blue;
+    margin: 0;
+    cursor: pointer;
+  }
+}

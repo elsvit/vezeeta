@@ -1,0 +1,45 @@
+@import '../../../../shared/Variables';
+@import '../../../../shared/Colors';
+@import '../../../../shared/FontSizes';
+
+.modal-content {
+  .cancel-appointment-info-container {
+    padding: $spacing-7 $spacing-8 $spacing-7 $spacing-16;
+    font-size: $title-en;
+    line-height: $title-en;
+    color: $helper-grey;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    .modal-buttons-container {
+      margin-top: $spacing-15;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+
+      .btn-container--ghost {
+        height: 48px;
+        max-width: none;
+        width: 35%;
+        border: 2px solid $helper-grey;
+
+        .text-container {
+          min-width: 100%;
+
+          label {
+            font-size: $title-en;
+            margin-right: $spacing-3;
+            letter-spacing: 1px;
+          }
+        }
+      }
+
+      .btn {
+        width: 62%;
+        height: 48px;
+        font-size: $title-en;
+      }
+    }
+  }
+}
